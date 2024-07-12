@@ -1,0 +1,11 @@
+﻿  бд.cpp
+C:\Users\vas\source\repos\бд\бд\бд.cpp(16,47): warning C4091: typedef : пропускается слева от "role_0", когда ни одна переменная не объявлена
+C:\Users\vas\source\repos\бд\бд\бд.cpp(76,75): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+C:\Users\vas\source\repos\бд\бд\бд.cpp(118,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\vas\source\repos\бд\бд\бд.cpp(242,37): warning C4551: в вызове функции отсутствует список аргументов
+  Создание кода
+  1 of 10 functions (10.0%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    1 functions had inline decision re-evaluated but remain unchanged
+  Создание кода завершено
+  бд.vcxproj -> C:\Users\vas\source\repos\бд\Release\бд.exe
