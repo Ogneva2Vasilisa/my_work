@@ -1,0 +1,19 @@
+﻿  лкггг.cpp
+C:\Users\vas\source\repos\лкггг\лкггг\лкггг.cpp(55,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\vas\source\repos\лкггг\лкггг\лкггг.cpp(68,22): warning C4018: >: несоответствие типов со знаком и без знака
+C:\Users\vas\source\repos\лкггг\лкггг\лкггг.cpp(68,38): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\vas\source\repos\лкггг\лкггг\лкггг.cpp(73,19): warning C4018: >: несоответствие типов со знаком и без знака
+C:\Users\vas\source\repos\лкггг\лкггг\лкггг.cpp(77,69): warning C4244: +=: преобразование "double" в "float", возможна потеря данных
+C:\Users\vas\source\repos\лкггг\лкггг\лкггг.cpp(111,16): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\vas\source\repos\лкггг\лкггг\лкггг.cpp(113,22): warning C4244: инициализация: преобразование "unsigned __int64" в "unsigned long", возможна потеря данных
+C:\Users\vas\source\repos\лкггг\лкггг\лкггг.cpp(117,17): warning C4244: =: преобразование "unsigned __int64" в "unsigned long", возможна потеря данных
+C:\Users\vas\source\repos\лкггг\лкггг\лкггг.cpp(132,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\vas\source\repos\лкггг\лкггг\лкггг.cpp(156,54): warning C4244: +=: преобразование "double" в "float", возможна потеря данных
+C:\Users\vas\source\repos\лкггг\лкггг\лкггг.cpp(173,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\vas\source\repos\лкггг\лкггг\лкггг.cpp(278,24): warning C4129: P: неизвестная escape-последовательность
+LINK : warning LNK4075: не учитывается "/INCREMENTAL" из-за спецификации "/LTCG"
+  Создание кода
+  Previous IPDB not found, fall back to full compilation.
+  All 11 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Создание кода завершено
+  лкггг.vcxproj -> C:\Users\vas\source\repos\лкггг\Release\лкггг.exe
