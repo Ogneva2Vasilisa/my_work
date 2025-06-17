@@ -1,3 +1,0 @@
-﻿  oib8_decode.cpp
-C:\Users\vas\source\repos\oib8_decode\oib8_decode\oib8_decode.cpp(17,19): warning C4244: =: преобразование "double" в "int", возможна потеря данных
-  oib8_decode.vcxproj -> C:\Users\vas\source\repos\oib8_decode\Debug\oib8_decode.exe
