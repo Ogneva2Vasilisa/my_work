@@ -1,0 +1,1 @@
+/usr/bin/cc CMakeFiles/zlib_static_example.dir/example.c.o -o zlib_static_example  ../libz.a

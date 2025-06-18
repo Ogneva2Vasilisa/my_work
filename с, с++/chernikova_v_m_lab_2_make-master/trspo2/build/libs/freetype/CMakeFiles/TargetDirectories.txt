@@ -1,0 +1,9 @@
+/home/kali/Documents/trspo2/build/libs/freetype/CMakeFiles/freetype.dir
+/home/kali/Documents/trspo2/build/libs/freetype/CMakeFiles/package.dir
+/home/kali/Documents/trspo2/build/libs/freetype/CMakeFiles/package_source.dir
+/home/kali/Documents/trspo2/build/libs/freetype/CMakeFiles/edit_cache.dir
+/home/kali/Documents/trspo2/build/libs/freetype/CMakeFiles/rebuild_cache.dir
+/home/kali/Documents/trspo2/build/libs/freetype/CMakeFiles/list_install_components.dir
+/home/kali/Documents/trspo2/build/libs/freetype/CMakeFiles/install.dir
+/home/kali/Documents/trspo2/build/libs/freetype/CMakeFiles/install/local.dir
+/home/kali/Documents/trspo2/build/libs/freetype/CMakeFiles/install/strip.dir
