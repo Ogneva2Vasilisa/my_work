@@ -1,0 +1,12 @@
+﻿  cursse0.cpp
+C:\Users\Vasilisa\source\repos\cursse0\cursse0\cursse0.cpp(212,11): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\Vasilisa\source\repos\cursse0\cursse0\cursse0.cpp(490,22): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\Vasilisa\source\repos\cursse0\cursse0\cursse0.cpp(504,22): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\Vasilisa\source\repos\cursse0\cursse0\cursse0.cpp(517,22): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\Vasilisa\source\repos\cursse0\cursse0\cursse0.cpp(502,10): warning C4101: t: неиспользованная локальная переменная
+C:\Users\Vasilisa\source\repos\cursse0\cursse0\cursse0.cpp(669,101): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\Vasilisa\source\repos\cursse0\cursse0\cursse0.cpp(674,130): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\Vasilisa\source\repos\cursse0\cursse0\cursse0.cpp(873,22): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\Vasilisa\source\repos\cursse0\cursse0\cursse0.cpp(839,1): warning C4715: analyse: значение возвращается не при всех путях выполнения
+C:\Users\Vasilisa\source\repos\cursse0\cursse0\cursse0.cpp(693,1): warning C4715: analise_2: значение возвращается не при всех путях выполнения
+  cursse0.vcxproj -> C:\Users\Vasilisa\source\repos\cursse0\x64\Debug\cursse0.exe

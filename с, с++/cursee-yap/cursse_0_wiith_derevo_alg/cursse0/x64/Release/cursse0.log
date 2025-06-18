@@ -1,0 +1,17 @@
+﻿  cursse0.cpp
+E:\vas_vaznoe\япы\cursee-yap\cursse_0_wiith_derevo_alg\cursse0\cursse0.cpp(380,18): warning C4267: инициализация: преобразование из "size_t" в "short"; возможна потеря данных
+E:\vas_vaznoe\япы\cursee-yap\cursse_0_wiith_derevo_alg\cursse0\cursse0.cpp(465,22): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+E:\vas_vaznoe\япы\cursee-yap\cursse_0_wiith_derevo_alg\cursse0\cursse0.cpp(479,22): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+E:\vas_vaznoe\япы\cursee-yap\cursse_0_wiith_derevo_alg\cursse0\cursse0.cpp(491,22): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+E:\vas_vaznoe\япы\cursee-yap\cursse_0_wiith_derevo_alg\cursse0\cursse0.cpp(477,10): warning C4101: t: неиспользованная локальная переменная
+E:\vas_vaznoe\япы\cursee-yap\cursse_0_wiith_derevo_alg\cursse0\cursse0.cpp(644,101): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+E:\vas_vaznoe\япы\cursee-yap\cursse_0_wiith_derevo_alg\cursse0\cursse0.cpp(649,112): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+E:\vas_vaznoe\япы\cursee-yap\cursse_0_wiith_derevo_alg\cursse0\cursse0.cpp(840,22): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+  Создание кода
+E:\vas_vaznoe\япы\cursee-yap\cursse_0_wiith_derevo_alg\cursse0\cursse0.cpp(668): warning C4715: analise_2: значение возвращается не при всех путях выполнения
+E:\vas_vaznoe\япы\cursee-yap\cursse_0_wiith_derevo_alg\cursse0\cursse0.cpp(806): warning C4715: analyse: значение возвращается не при всех путях выполнения
+  164 of 168 functions (97.6%) were compiled, the rest were copied from previous compilation.
+    8 functions were new in current compilation
+    1 functions had inline decision re-evaluated but remain unchanged
+  Создание кода завершено
+  cursse0.vcxproj -> E:\vas_vaznoe\япы\cursee-yap\cursse_0_wiith_derevo_alg\x64\Release\cursse0.exe
