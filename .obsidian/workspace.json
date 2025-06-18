@@ -35,8 +35,7 @@
               "title": "README"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -183,10 +182,10 @@
       "command-palette:Открыть палитру команд": false
     }
   },
-  "active": "f03d602eea1af27b",
+  "active": "0056e791d0f79815",
   "lastOpenFiles": [
-    "с, с++/cursee-yap/README.md",
     "с, с++/yap1/README.md",
+    "с, с++/cursee-yap/README.md",
     "с, с++/CUDA_MD5/README.md",
     "img/Pasted image 20250618194535.png",
     "img/Pasted image 20250618193945.png",
