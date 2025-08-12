@@ -1,0 +1,1 @@
+/usr/bin/cc CMakeFiles/minigzip.dir/minigzip.c.o -o minigzip  -Wl,-rpath,/home/kali/Documents/trspo2/build/libs/zlib ../libz.so.1.4.1.1

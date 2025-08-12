@@ -1,0 +1,8 @@
+﻿  357.cpp
+C:\Users\vas\source\repos\357\357\357.cpp(14,2): warning C4091: typedef : пропускается слева от "ls", когда ни одна переменная не объявлена
+C:\Users\vas\source\repos\357\357\357.cpp(144,16): warning C4477: "printf": в строке форматирования "%llu" требуется аргумент типа "unsigned __int64", но вариативный аргумент "1" имеет тип "ls *"
+C:\Users\vas\source\repos\357\357\357.cpp(144,16): warning C4477: "printf": в строке форматирования "%llu" требуется аргумент типа "unsigned __int64", но вариативный аргумент "2" имеет тип "ls *"
+C:\Users\vas\source\repos\357\357\357.cpp(145,21): warning C4477: "fprintf": в строке форматирования "%llu" требуется аргумент типа "unsigned __int64", но вариативный аргумент "1" имеет тип "ls *"
+C:\Users\vas\source\repos\357\357\357.cpp(210,21): warning C4477: "fprintf": в строке форматирования "%llu" требуется аргумент типа "unsigned __int64", но вариативный аргумент "1" имеет тип "ls *"
+C:\Users\vas\source\repos\357\357\357.cpp(415): warning C4715: minna: значение возвращается не при всех путях выполнения
+  357.vcxproj -> C:\Users\vas\source\repos\357\x64\Debug\357.exe

@@ -1,0 +1,46 @@
+Welcome to help.txt
+
+NavMode:
+RIGHT - move cursor right
+LEFT - move cursor left
+UP - move cursor up
+DOWN - move cursor down
+
+0, ^ - begin line
+$ - end line
+w - end word
+b - begin word
+gg - begin file
+G - end file
+NG - N line
+x - delete symbol under cursor
+diw - delete word under cursor
+dd - cut line
+yy - copy line
+yw - copy word
+p - paste
+
+SearchMode
+/text - search text forward
+?text - search text back
+n - reset search
+N - reset search back
+
+EditMode
+i - edit under cursor
+I - begin line and edit 
+A - end line and edit
+S - delete line and edit
+r - reset symbol
+
+CommandMode
+o filename - open file
+x - save in file and exit
+w - save in file
+w filename - save in filename
+q - exit
+q! - exit without save
+wq! - save in file and exit
+number - number line
+h - help
+h! - exit help

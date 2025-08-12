@@ -1,0 +1,13 @@
+﻿  бд.cpp
+C:\Users\vas\source\repos\бд\бд\бд.cpp(11,47): warning C4091: typedef : пропускается слева от "role_0", когда ни одна переменная не объявлена
+C:\Users\vas\source\repos\бд\бд\бд.cpp(69,75): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+C:\Users\vas\source\repos\бд\бд\бд.cpp(106,73): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+C:\Users\vas\source\repos\бд\бд\бд.cpp(120,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\vas\source\repos\бд\бд\бд.cpp(213,76): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+C:\Users\vas\source\repos\бд\бд\бд.cpp(304,76): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+C:\Users\vas\source\repos\бд\бд\бд.cpp(267,7): warning C4101: ai: неиспользованная локальная переменная
+C:\Users\vas\source\repos\бд\бд\бд.cpp(416,75): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+C:\Users\vas\source\repos\бд\бд\бд.cpp(476,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\vas\source\repos\бд\бд\бд.cpp(601,37): warning C4551: в вызове функции отсутствует список аргументов
+C:\Users\vas\source\repos\бд\бд\бд.cpp(503): warning C4715: edit_num: значение возвращается не при всех путях выполнения
+  бд.vcxproj -> C:\Users\vas\source\repos\бд\Debug\бд.exe

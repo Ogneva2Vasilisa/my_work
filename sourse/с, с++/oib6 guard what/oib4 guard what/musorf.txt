@@ -1,0 +1,13 @@
+int ghidroegl (int kd, int tpegopsbg){
+int dhshh=0;
+kd=0;
+tpegopsbg=765;
+while (kd<tpegopsbg)
+kd++;
+return 0;}
+void jei (int lons){
+int lons=543;
+for (int mew=1; mew<30, mew++)
+lons++;
+int kr=55;
+printf ("%d", lons);}
