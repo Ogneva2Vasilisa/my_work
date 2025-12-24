@@ -1,7 +1,7 @@
 Сборник моих работ 
 C/C++:
 
-$\color{rgb(213,62,30)}{\textsf{■}}$ [Реализация алгоритма MD5 на CUDA](с,%20с++/CUDA_MD5/README.md)
+$\color{rgb(213,62,30)}{\textsf{■}}$ [Реализация алгоритма MD5 на CUDA]
 
 $\color{rgb(213,62,30)}{\textsf{■}}$ [Оптимизация игры Эрудит](с,%20с++/cursee-yap/README.md)
 
