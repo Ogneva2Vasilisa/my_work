@@ -1,0 +1,38 @@
+# CMake generated Testfile for 
+# Source directory: /home/kali/Documents/trspo2/libs/zlib/test
+# Build directory: /home/kali/Documents/trspo2/build/libs/zlib/test
+# 
+# This file includes the relevant testing commands required for 
+# testing this directory and lists subdirectories to be tested as well.
+add_test([=[zlib_example]=] "/home/kali/Documents/trspo2/build/libs/zlib/test/zlib_example")
+set_tests_properties([=[zlib_example]=] PROPERTIES  _BACKTRACE_TRIPLES "/home/kali/Documents/trspo2/libs/zlib/test/CMakeLists.txt;20;add_test;/home/kali/Documents/trspo2/libs/zlib/test/CMakeLists.txt;0;")
+add_test([=[zlib_example64]=] "/home/kali/Documents/trspo2/build/libs/zlib/test/zlib_example64")
+set_tests_properties([=[zlib_example64]=] PROPERTIES  _BACKTRACE_TRIPLES "/home/kali/Documents/trspo2/libs/zlib/test/CMakeLists.txt;45;add_test;/home/kali/Documents/trspo2/libs/zlib/test/CMakeLists.txt;0;")
+add_test([=[zlib_static_example]=] "/home/kali/Documents/trspo2/build/libs/zlib/test/zlib_static_example")
+set_tests_properties([=[zlib_static_example]=] PROPERTIES  _BACKTRACE_TRIPLES "/home/kali/Documents/trspo2/libs/zlib/test/CMakeLists.txt;67;add_test;/home/kali/Documents/trspo2/libs/zlib/test/CMakeLists.txt;0;")
+add_test([=[zlib-coverage]=] "/home/kali/Documents/trspo2/build/libs/zlib/test/infcover")
+set_tests_properties([=[zlib-coverage]=] PROPERTIES  _BACKTRACE_TRIPLES "/home/kali/Documents/trspo2/libs/zlib/test/CMakeLists.txt;101;add_test;/home/kali/Documents/trspo2/libs/zlib/test/CMakeLists.txt;0;")
+add_test([=[zlib-coverage-summary]=] "/usr/bin/gcov" "/home/kali/Documents/trspo2/libs/zlib/test/infcover.c" "-o" "/home/kali/Documents/trspo2/build/libs/zlib/test/CMakeFiles/infcover.dir/infcover.c.gcda")
+set_tests_properties([=[zlib-coverage-summary]=] PROPERTIES  DEPENDS "zlib-coverage" _BACKTRACE_TRIPLES "/home/kali/Documents/trspo2/libs/zlib/test/CMakeLists.txt;103;add_test;/home/kali/Documents/trspo2/libs/zlib/test/CMakeLists.txt;0;")
+add_test([=[zlib_static_example64]=] "/home/kali/Documents/trspo2/build/libs/zlib/test/zlib_static_example64")
+set_tests_properties([=[zlib_static_example64]=] PROPERTIES  _BACKTRACE_TRIPLES "/home/kali/Documents/trspo2/libs/zlib/test/CMakeLists.txt;124;add_test;/home/kali/Documents/trspo2/libs/zlib/test/CMakeLists.txt;0;")
+add_test([=[zlib_install]=] "/usr/bin/cmake" "--install" "/home/kali/Documents/trspo2/build/libs/zlib" "--prefix" "/home/kali/Documents/trspo2/build/libs/zlib/test/test_install" "--config" "")
+set_tests_properties([=[zlib_install]=] PROPERTIES  FIXTURES_SETUP "zlib_install" WORKING_DIRECTORY "/home/kali/Documents/trspo2/build/libs/zlib" _BACKTRACE_TRIPLES "/home/kali/Documents/trspo2/libs/zlib/test/CMakeLists.txt;128;add_test;/home/kali/Documents/trspo2/libs/zlib/test/CMakeLists.txt;0;")
+add_test([=[zlib_find_package_configure]=] "/usr/bin/cmake" "-B/home/kali/Documents/trspo2/build/libs/zlib/test/findpackage_test_build" "-DCMAKE_BUILD_TYPE=" "-DCMAKE_C_COMPILER=/usr/bin/cc" "-DCMAKE_C_FLAGS=" "-DCMAKE_INSTALL_PREFIX=/home/kali/Documents/trspo2/build/libs/zlib/test/test_install" "--fresh" "-G" "Unix Makefiles" "-S/home/kali/Documents/trspo2/build/libs/zlib/test/findpackage_test")
+set_tests_properties([=[zlib_find_package_configure]=] PROPERTIES  FIXTURES_REQUIRED "zlib_install" FIXTURES_SETUP "fp_config" _BACKTRACE_TRIPLES "/home/kali/Documents/trspo2/libs/zlib/test/CMakeLists.txt;162;add_test;/home/kali/Documents/trspo2/libs/zlib/test/CMakeLists.txt;0;")
+add_test([=[zlib_find_package_build]=] "/usr/bin/cmake" "--build" "." "--config" "")
+set_tests_properties([=[zlib_find_package_build]=] PROPERTIES  FIXTURES_REQUIRED "fp_config" FIXTURES_SETUP "fp_build" WORKING_DIRECTORY "/home/kali/Documents/trspo2/build/libs/zlib/test/findpackage_test_build" _BACKTRACE_TRIPLES "/home/kali/Documents/trspo2/libs/zlib/test/CMakeLists.txt;172;add_test;/home/kali/Documents/trspo2/libs/zlib/test/CMakeLists.txt;0;")
+add_test([=[zlib_find_package_test]=] "/usr/bin/ctest" "-C" "")
+set_tests_properties([=[zlib_find_package_test]=] PROPERTIES  ENVIRONMENT "CTEST_OUTPUT_ON_FAILURE=1" FIXTURES_REQUIRED "fp_build" WORKING_DIRECTORY "/home/kali/Documents/trspo2/build/libs/zlib/test/findpackage_test_build" _BACKTRACE_TRIPLES "/home/kali/Documents/trspo2/libs/zlib/test/CMakeLists.txt;177;add_test;/home/kali/Documents/trspo2/libs/zlib/test/CMakeLists.txt;0;")
+add_test([=[zlib_add_subdirectory_configure]=] "/usr/bin/cmake" "-B/home/kali/Documents/trspo2/build/libs/zlib/test/add_subdirectory_test_build" "-DCMAKE_BUILD_TYPE=" "-DCMAKE_C_COMPILER=/usr/bin/cc" "-DCMAKE_C_FLAGS=" "-DCMAKE_INSTALL_PREFIX=/home/kali/Documents/trspo2/build/libs/zlib/test/test_install" "--fresh" "-G" "Unix Makefiles" "-S/home/kali/Documents/trspo2/build/libs/zlib/test/findpackage_test")
+set_tests_properties([=[zlib_add_subdirectory_configure]=] PROPERTIES  FIXTURES_REQUIRED "zlib_install" FIXTURES_SETUP "as_config" _BACKTRACE_TRIPLES "/home/kali/Documents/trspo2/libs/zlib/test/CMakeLists.txt;197;add_test;/home/kali/Documents/trspo2/libs/zlib/test/CMakeLists.txt;0;")
+add_test([=[zlib_add_subdirectory_build]=] "/usr/bin/cmake" "--build" "." "--config" "")
+set_tests_properties([=[zlib_add_subdirectory_build]=] PROPERTIES  FIXTURES_REQUIRED "as_config" FIXTURES_SETUP "as_build" WORKING_DIRECTORY "/home/kali/Documents/trspo2/build/libs/zlib/test/add_subdirectory_test_build" _BACKTRACE_TRIPLES "/home/kali/Documents/trspo2/libs/zlib/test/CMakeLists.txt;207;add_test;/home/kali/Documents/trspo2/libs/zlib/test/CMakeLists.txt;0;")
+add_test([=[zlib_add_subdirectory_test]=] "/usr/bin/ctest" "-C" "")
+set_tests_properties([=[zlib_add_subdirectory_test]=] PROPERTIES  ENVIRONMENT "CTEST_OUTPUT_ON_FAILURE=1" FIXTURES_REQUIRED "as_build" WORKING_DIRECTORY "/home/kali/Documents/trspo2/build/libs/zlib/test/add_subdirectory_test_build" _BACKTRACE_TRIPLES "/home/kali/Documents/trspo2/libs/zlib/test/CMakeLists.txt;212;add_test;/home/kali/Documents/trspo2/libs/zlib/test/CMakeLists.txt;0;")
+add_test([=[zlib_add_subdirectory_exclude_configure]=] "/usr/bin/cmake" "-B/home/kali/Documents/trspo2/build/libs/zlib/test/add_subdirectory_exclude_test_build" "-DCMAKE_BUILD_TYPE=" "-DCMAKE_C_COMPILER=/usr/bin/cc" "-DCMAKE_C_FLAGS=" "-DCMAKE_INSTALL_PREFIX=/home/kali/Documents/trspo2/build/libs/zlib/test/test_install" "--fresh" "-G" "Unix Makefiles" "-S/home/kali/Documents/trspo2/build/libs/zlib/test/findpackage_test")
+set_tests_properties([=[zlib_add_subdirectory_exclude_configure]=] PROPERTIES  FIXTURES_REQUIRED "zlib_install" FIXTURES_SETUP "asx_config" _BACKTRACE_TRIPLES "/home/kali/Documents/trspo2/libs/zlib/test/CMakeLists.txt;232;add_test;/home/kali/Documents/trspo2/libs/zlib/test/CMakeLists.txt;0;")
+add_test([=[zlib_add_subdirectory_exclude_build]=] "/usr/bin/cmake" "--build" "." "--config" "")
+set_tests_properties([=[zlib_add_subdirectory_exclude_build]=] PROPERTIES  FIXTURES_REQUIRED "as_config" FIXTURES_SETUP "asx_build" WORKING_DIRECTORY "/home/kali/Documents/trspo2/build/libs/zlib/test/add_subdirectory_exclude_test_build" _BACKTRACE_TRIPLES "/home/kali/Documents/trspo2/libs/zlib/test/CMakeLists.txt;242;add_test;/home/kali/Documents/trspo2/libs/zlib/test/CMakeLists.txt;0;")
+add_test([=[zlib_add_subdirectory_exclude_test]=] "/usr/bin/ctest" "-C" "")
+set_tests_properties([=[zlib_add_subdirectory_exclude_test]=] PROPERTIES  ENVIRONMENT "CTEST_OUTPUT_ON_FAILURE=1" FIXTURES_REQUIRED "asx_build" WORKING_DIRECTORY "/home/kali/Documents/trspo2/build/libs/zlib/test/add_subdirectory_exclude_test_build" _BACKTRACE_TRIPLES "/home/kali/Documents/trspo2/libs/zlib/test/CMakeLists.txt;248;add_test;/home/kali/Documents/trspo2/libs/zlib/test/CMakeLists.txt;0;")

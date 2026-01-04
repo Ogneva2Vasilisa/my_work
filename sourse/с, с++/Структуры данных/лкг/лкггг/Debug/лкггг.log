@@ -1,0 +1,4 @@
+﻿LINK : warning LNK4075: не учитывается "/INCREMENTAL" из-за спецификации "/OPT:ICF"
+Source (2).obj : warning LNK4075: не учитывается "/EDITANDCONTINUE" из-за спецификации "/OPT:ICF"
+лкггг.obj : error LNK2005: _main уже определен в Source (2).obj
+C:\Users\vas\source\repos\лкггг\Debug\лкггг.exe : fatal error LNK1169: обнаружен многократно определенный символ - один или более

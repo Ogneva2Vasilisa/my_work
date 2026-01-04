@@ -1,0 +1,8 @@
+﻿cl : командная строка warning D9025: переопределение "/sdl" на "/GS-"
+  yap2.c
+LINK : warning LNK4108: параметр /ALIGN указан без параметра /DRIVER; невозможно запустить образ
+LINK : warning LNK4075: не учитывается "/INCREMENTAL" из-за спецификации "/LTCG"
+  Создание кода
+  Not all modules are compiled with -Gy (function comdat), build without incremental LTCG.
+  Создание кода завершено
+  yap2.vcxproj -> C:\Users\vas\source\repos\yap2\Release\yap2.exe

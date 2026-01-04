@@ -1,0 +1,35 @@
+cd ../../DriverTest
+dir
+cd Drivers
+
+
+pnputil /add-driver nullfilter.inf /install
+sc query nullfilter
+
+sc start nullfilter
+
+fltmc
+fltmc attach NullFilter C:
+
+fltmc detach NullFilter C:
+
+sc stop nullfilter
+
+sc query delete nullfilter
+
+pnputil /enum-drivers
+pnputil /delete-driver oem9.inf /uninstall
+
+
+test.exe
+Read:1
+Users\WDKRemoteUser\Documents\test1.txt
+Write:2
+Users\WDKRemoteUser\Documents\test.txt Users\WDKRemoteUser\Documents\1.txt
+---
+notepad.exe
+Read:2
+Users\WDKRemoteUser\Documents\test.txt Users\WDKRemoteUser\Documents\1.txt
+Write:1
+Users\WDKRemoteUser\Documents\test1.txt
+---

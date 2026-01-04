@@ -1,1 +1,0 @@
-get_c m=3276 cmin=0 cmax=2276

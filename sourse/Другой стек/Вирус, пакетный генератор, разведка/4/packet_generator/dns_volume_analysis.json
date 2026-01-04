@@ -1,0 +1,36 @@
+{
+  "threshold": 0.7,
+  "suspicious_pairs": [
+    {
+      "ip": "192.168.50.33",
+      "domain": "dns.msftncsi.com",
+      "domain_requests": 2873,
+      "total_requests": 3628,
+      "percentage": 0.791896361631753,
+      "other_domains": 306
+    },
+    {
+      "ip": "192.168.50.24",
+      "domain": "www.google.com",
+      "domain_requests": 13135,
+      "total_requests": 16638,
+      "percentage": 0.7894578675321553,
+      "other_domains": 329
+    },
+    {
+      "ip": "192.168.50.14",
+      "domain": "ns2.myspace.com",
+      "domain_requests": 1039,
+      "total_requests": 1411,
+      "percentage": 0.7363571934798016,
+      "other_domains": 280
+    }
+  ],
+  "statistics": {
+    "total_dns_requests": 99970,
+    "lvs1_requests": 99970,
+    "lvs2_requests": 0,
+    "unique_lvs1_ips": 26,
+    "suspicious_ips": 3
+  }
+}

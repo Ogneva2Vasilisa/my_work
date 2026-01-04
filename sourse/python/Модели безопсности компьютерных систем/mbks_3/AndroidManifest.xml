@@ -1,0 +1,2787 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    android:versionCode="20515"
+    android:versionName="8.83"
+    android:compileSdkVersion="34"
+    android:compileSdkVersionCodename="14"
+    package="com.vkontakte.android"
+    platformBuildVersionCode="34"
+    platformBuildVersionName="14">
+    <uses-sdk
+        android:minSdkVersion="24"
+        android:targetSdkVersion="33"/>
+    <uses-permission android:name="com.vkontakte.android.usersstore.permission.SAVE"/>
+    <uses-permission android:name="com.vkontakte.android.usersstore.permission.LOAD"/>
+    <uses-permission
+        android:name="ru.vk.store.usersstore.permission.SAVE"
+        android:minSdkVersion="31"/>
+    <uses-permission
+        android:name="ru.vk.store.usersstore.permission.LOAD"
+        android:minSdkVersion="31"/>
+    <queries>
+        <package android:name="com.vk.mail"/>
+        <package android:name="com.vk.im"/>
+        <package android:name="com.uma.musicvk"/>
+        <package android:name="ru.ok.android"/>
+        <package android:name="com.huawei.health"/>
+        <package android:name="com.facebook.orca"/>
+        <package android:name="com.facebook.katana"/>
+        <package android:name="com.example.facebook"/>
+        <package android:name="com.facebook.android"/>
+        <intent>
+            <action android:name="android.intent.action.MAIN"/>
+        </intent>
+        <intent>
+            <action android:name="android.support.customtabs.action.CustomTabsService"/>
+        </intent>
+        <package android:name="com.vkontakte.android"/>
+        <package android:name="com.vk.admin"/>
+        <package android:name="org.telegram.messenger"/>
+        <package android:name="com.zhiliaoapp.musically"/>
+        <package android:name="com.google.android.apps.docs.editors.docs"/>
+        <package android:name="com.google.android.youtube"/>
+        <package android:name="com.avito.android"/>
+        <package android:name="com.google.android.apps.docs"/>
+        <package android:name="com.wildberries.ru"/>
+        <package android:name="ru.ozon.app.android"/>
+        <package android:name="ru.yandex.disk"/>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+        </intent>
+        <package android:name="com.alibaba.aliexpresshd"/>
+        <package android:name="com.android.chrome"/>
+        <package android:name="com.facebook.lite"/>
+        <package android:name="org.mozilla.firefox"/>
+        <package android:name="com.google.android.talk"/>
+        <package android:name="com.google.android.gm"/>
+        <package android:name="com.google.android.apps.maps"/>
+        <package android:name="com.google.android.apps.translate"/>
+        <package android:name="com.android.vending"/>
+        <package android:name="com.instagram.android"/>
+        <package android:name="ru.mail.mailapp"/>
+        <package android:name="ru.mail"/>
+        <package android:name="ru.mail.biz.avocado"/>
+        <package android:name="com.mapswithme.maps.pro"/>
+        <package android:name="com.opera.browser"/>
+        <package android:name="ccom.zhiliaoapp.musically"/>
+        <package android:name="com.zhiliaoapp.musically.go"/>
+        <package android:name="com.skype.raider"/>
+        <package android:name="com.skype.m2"/>
+        <package android:name="com.snapchat.android"/>
+        <package android:name="ru.sberbankmobile"/>
+        <package android:name="com.soundcloud.android"/>
+        <package android:name="com.spotify.music"/>
+        <package android:name="org.thunderdog.challegram"/>
+        <package android:name="com.twitter.android"/>
+        <package android:name="com.whatsapp"/>
+        <package android:name="com.yandex.searchapp"/>
+        <package android:name="com.yandex.browser"/>
+        <package android:name="com.yandex.browser.lite"/>
+        <package android:name="ru.yandex.yandexmaps"/>
+        <package android:name="ru.yandex.mail"/>
+        <package android:name="ru.yandex.yandexnavi"/>
+        <package android:name="ru.dublgis.dgismobile"/>
+        <package android:name="com.icq.mobile.client"/>
+        <package android:name="com.qianbaotong.qianbaotongao"/>
+        <package android:name="com.viber.voip"/>
+        <package android:name="com.vk.clips"/>
+        <package android:name="com.zeptolab.cats.google"/>
+        <package android:name="video.like"/>
+        <package android:name="com.mojang.minecraftpe"/>
+        <package android:name="com.mojang.minecrafttrialpe"/>
+        <package android:name="com.supercell.brawlstars"/>
+        <package android:name="com.roblox.client"/>
+        <package android:name="com.supercell.clashofclans"/>
+        <package android:name="com.sandboxol.blockymods"/>
+        <package android:name="com.google.android.apps.recorder"/>
+        <package android:name="com.google.android.googlequicksearchbox"/>
+        <package android:name="com.google.android.projection.gearhead"/>
+        <package android:name="com.sec.android.app.samsungapps"/>
+        <package android:name="com.huawei.appmarket"/>
+        <intent>
+            <action android:name="com.vkontakte.android.action.CHANGE_PASSWORD_V1"/>
+        </intent>
+        <package android:name="com.vk.calls"/>
+        <intent>
+            <action android:name="com.vk.silentauth.action.GET_INFO"/>
+        </intent>
+        <intent>
+            <action android:name="com.vk.signtoken.action.SIGN_ANONYMOUS_TOKEN"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.MAIN"/>
+            <category android:name="android.intent.category.HOME"/>
+        </intent>
+        <package android:name="ru.vk.store"/>
+        <intent>
+            <action android:name="com.vk.push.HOST_SERVICE"/>
+        </intent>
+        <intent>
+            <action android:name="com.vkontakte.android.action.SDK_AUTH"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <category android:name="android.intent.category.BROWSABLE"/>
+            <data android:scheme="http"/>
+        </intent>
+        <intent>
+            <action android:name="ru.mail.libverify.ipc.IpcMessageService"/>
+        </intent>
+        <package android:name="com.google.android.gms.policy_cast_dynamite"/>
+        <provider android:authorities="androidx.car.app.connection"/>
+        <intent>
+            <action android:name="ru.vk.store.provider.review.RemoteReviewFlowProvider"/>
+        </intent>
+        <intent>
+            <action android:name="ru.vk.store.provider.analytics.AnalyticsProvider"/>
+        </intent>
+        <package android:name="ru.vk.store.qa"/>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <category android:name="android.intent.category.BROWSABLE"/>
+            <data android:scheme="https"/>
+        </intent>
+        <intent>
+            <action android:name="ru.vk.store.RequestIgnoreBatteryOptimizations"/>
+        </intent>
+        <intent>
+            <action android:name="com.android.vending.billing.InAppBillingService.BIND"/>
+        </intent>
+        <intent>
+            <action android:name="com.huawei.hms.core.aidlservice"/>
+        </intent>
+        <intent>
+            <action android:name="com.huawei.hms.core"/>
+        </intent>
+    </queries>
+    <supports-screens
+        android:anyDensity="true"
+        android:smallScreens="true"
+        android:normalScreens="true"
+        android:largeScreens="true"
+        android:resizeable="true"
+        android:xlargeScreens="true"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
+    <uses-permission android:name="com.android.vending.BILLING"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_MEDIA_LOCATION"/>
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES"/>
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="29"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS"/>
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="com.vkontakte.android.permission.MAPS_RECEIVE"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-permission android:name="com.vkontakte.android.permission.ACCESS_DATA"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.USE_BIOMETRIC"/>
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID"/>
+    <uses-permission android:name="com.vk.calls.usersstore.permission.SAVE"/>
+    <uses-permission android:name="com.vk.calls.usersstore.permission.LOAD"/>
+    <uses-permission android:name="com.vk.clips.usersstore.permission.SAVE"/>
+    <uses-permission android:name="com.vk.clips.usersstore.permission.LOAD"/>
+    <uses-permission android:name="com.vk.im.usersstore.permission.SAVE"/>
+    <uses-permission android:name="com.vk.im.usersstore.permission.LOAD"/>
+    <uses-permission android:name="android.gms.permission.ACTIVITY_RECOGNITION"/>
+    <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION"/>
+    <uses-permission android:name="android.permission.READ_CALL_LOG"/>
+    <uses-permission android:name="android.permission.READ_CALENDAR"/>
+    <uses-permission android:name="android.permission.WRITE_CALENDAR"/>
+    <permission
+        android:name="com.vkontakte.android.permission.C2D_MESSAGE"
+        android:protectionLevel="signature"/>
+    <permission
+        android:name="com.vkontakte.android.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature"/>
+    <permission
+        android:name="com.vkontakte.android.permission.ACCESS_DATA"
+        android:protectionLevel="signature"/>
+    <permission
+        android:name="android.permission.INTERACT_ACROSS_USERS_FULL"
+        android:protectionLevel="signature"/>
+    <uses-feature
+        android:glEsVersion="0x20000"
+        android:required="true"/>
+    <uses-feature
+        android:name="android.hardware.location"
+        android:required="false"/>
+    <uses-feature
+        android:name="android.hardware.location.gps"
+        android:required="false"/>
+    <uses-feature
+        android:name="android.hardware.location.network"
+        android:required="false"/>
+    <uses-feature
+        android:name="android.hardware.screen.landscape"
+        android:required="false"/>
+    <uses-feature
+        android:name="android.hardware.screen.portrait"
+        android:required="false"/>
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false"/>
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false"/>
+    <uses-feature
+        android:name="android.hardware.microphone"
+        android:required="false"/>
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false"/>
+    <uses-permission android:name="android.permission.READ_PHONE_NUMBERS"/>
+    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.QUICKBOOT_POWERON"/>
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM"/>
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <permission
+        android:name="com.vkontakte.android.permission.APP_REDIRECT"
+        android:protectionLevel="signature"/>
+    <uses-permission android:name="com.vkontakte.android.permission.APP_REDIRECT"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK"/>
+    <uses-permission android:name="android.permission.health.READ_DISTANCE"/>
+    <uses-permission android:name="android.permission.health.READ_STEPS"/>
+    <uses-permission android:name="android.permission.health.READ_EXERCISE"/>
+    <uses-permission android:name="android.permission.health.READ_TOTAL_CALORIES_BURNED"/>
+    <uses-permission android:name="com.huawei.permission.SECURITY_DIAGNOSE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission
+        android:name="android.permission.AUTHENTICATE_ACCOUNTS"
+        android:maxSdkVersion="22"/>
+    <uses-permission-sdk-23 android:name="android.permission.CAMERA"/>
+    <uses-permission-sdk-23 android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission-sdk-23 android:name="android.permission.READ_CALL_LOG"/>
+    <uses-permission-sdk-23 android:name="android.permission.READ_PHONE_NUMBERS"/>
+    <permission
+        android:name="com.vkontakte.android.usersstore.permission.SAVE"
+        android:protectionLevel="signature"/>
+    <permission
+        android:name="com.vkontakte.android.usersstore.permission.LOAD"
+        android:protectionLevel="signature"/>
+    <uses-permission android:name="android.provider.Telephony.SMS_RECEIVED"/>
+    <uses-permission
+        android:name="android.permission.GET_ACCOUNTS"
+        android:maxSdkVersion="22"/>
+    <uses-feature
+        android:name="android.hardware.bluetooth"
+        android:required="false"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission
+        android:name="android.permission.CALL_PHONE"
+        android:maxSdkVersion="22"/>
+    <uses-permission android:name="android.permission.USE_FINGERPRINT"/>
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
+    <uses-feature
+        android:name="android.hardware.sensor.light"
+        android:required="false"/>
+    <uses-feature
+        android:name="android.hardware.sensor.compass"
+        android:required="false"/>
+    <uses-feature
+        android:name="android.hardware.sensor.gyroscope"
+        android:required="false"/>
+    <uses-feature
+        android:name="android.hardware.sensor.barometer"
+        android:required="false"/>
+    <uses-feature
+        android:name="android.hardware.sensor.proximity"
+        android:required="false"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT"/>
+    <permission
+        android:name="com.vkontakte.android.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        android:protectionLevel="signature"/>
+    <uses-permission android:name="com.vkontakte.android.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
+    <uses-permission android:name="com.sec.android.provider.badge.permission.READ"/>
+    <uses-permission android:name="com.sec.android.provider.badge.permission.WRITE"/>
+    <uses-permission android:name="com.htc.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="com.htc.launcher.permission.UPDATE_SHORTCUT"/>
+    <uses-permission android:name="com.sonyericsson.home.permission.BROADCAST_BADGE"/>
+    <uses-permission android:name="com.sonymobile.home.permission.PROVIDER_INSERT_BADGE"/>
+    <uses-permission android:name="com.anddoes.launcher.permission.UPDATE_COUNT"/>
+    <uses-permission android:name="com.majeur.launcher.permission.UPDATE_BADGE"/>
+    <uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE"/>
+    <uses-permission android:name="com.huawei.android.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="com.huawei.android.launcher.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.READ_APP_BADGE"/>
+    <uses-permission android:name="com.oppo.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="com.oppo.launcher.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_READ"/>
+    <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_WRITE"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <application
+        android:theme="@style/VkMilkLightStyle"
+        android:label="@string/app_name"
+        android:icon="@mipmap/mp_launcher"
+        android:name="com.vkontakte.android.VKApplication"
+        android:manageSpaceActivity="com.vkontakte.android.space.VKManageSpaceActivity"
+        android:allowBackup="false"
+        android:hardwareAccelerated="true"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:extractNativeLibs="true"
+        android:resizeableActivity="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:requestLegacyExternalStorage="true"
+        android:preserveLegacyExternalStorage="true"
+        android:localeConfig="@xml/locales_config">
+        <meta-data
+            android:name="com.vk.IM_STATE_CONTENT_PATH"
+            android:value="com.vk.im.providers.im"/>
+        <meta-data
+            android:name="com.vk.STANDALONE_MESSENGER"
+            android:value="false"/>
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAvrvAACdzmgDYFM9hvJS88KdSlQsafID0"/>
+        <meta-data
+            android:name="com.google.android.geo.API_SECRET"
+            android:value="yu6ZAA0OWO3kmr4es7fGtSmiyfk="/>
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/fb_app_id"/>
+        <meta-data
+            android:name="com.facebook.sdk.AdvertiserIDCollectionEnabled"
+            android:value="false"/>
+        <meta-data
+            android:name="com.facebook.sdk.AutoLogAppEventsEnabled"
+            android:value="false"/>
+        <meta-data
+            android:name="com.facebook.sdk.CodelessDebugLogEnabled"
+            android:value="false"/>
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version"/>
+        <meta-data
+            android:name="com.vk.bugtracker.android.appIdentifier"
+            android:value="-1"/>
+        <meta-data
+            android:name="com.vk.APP_STORE_NAME"
+            android:value="small"/>
+        <meta-data
+            android:name="com.vk.network.is_ssl_pinning"
+            android:value="false"/>
+        <meta-data
+            android:name="com.google.android.gms.vision.DEPENDENCIES"
+            android:value="barcode"/>
+        <meta-data
+            android:name="com.google.android.gms.car.application"
+            android:resource="@xml/automotive_app_desc"/>
+        <meta-data
+            android:name="com.google.android.gms.car.notification.SmallIcon"
+            android:resource="@mipmap/mp_launcher"/>
+        <meta-data
+            android:name="com.vk.SAFETY_NET_API_KEY"
+            android:value="AIzaSyBf_eM-cgRbg1gOkyEc2Il5gHqgsnFyVug"/>
+        <meta-data
+            android:name="com.huawei.hms.client.appid"
+            android:value="appid=101104117"/>
+        <meta-data
+            android:name="com.vk.oauth.esia.TEST_CLIENT_ID"
+            android:value=""/>
+        <meta-data
+            android:name="com.vk.oauth.esia.TEST_AUTH_URI"
+            android:value=""/>
+        <meta-data
+            android:name="com.vk.oauth.alfa.TEST_CLIENT_ID"
+            android:value=""/>
+        <meta-data
+            android:name="com.vk.oauth.alfa.TEST_HOST"
+            android:value=""/>
+        <meta-data
+            android:name="com.vk.is_strict_mode_enabled"
+            android:value="false"/>
+        <activity
+            android:theme="@style/SplashTheme"
+            android:name="com.vkontakte.android.space.VKManageSpaceActivity"
+            android:noHistory="true"/>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.vk.core.util.RecreateActivity"
+            android:process=":phoenix"/>
+        <activity
+            android:theme="@style/SplashTheme"
+            android:label="@string/app_name"
+            android:name="com.vkontakte.android.MainActivity"
+            android:exported="true"
+            android:finishOnTaskLaunch="true"
+            android:launchMode="singleTop"
+            android:configChanges="smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.media.action.MEDIA_PLAY_FROM_SEARCH"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.health.ACTION_SHOW_PERMISSIONS_RATIONALE"/>
+            </intent-filter>
+        </activity>
+        <activity-alias
+            android:label="@string/app_name"
+            android:icon="@mipmap/mp_launcher"
+            android:name="com.vk.android.launcher.icons.IconAlias.SpecialEventIcon1"
+            android:enabled="false"
+            android:exported="true"
+            android:targetActivity="com.vkontakte.android.MainActivity"
+            android:roundIcon="@mipmap/ic_launcher_round">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="@xml/shortcuts"/>
+        </activity-alias>
+        <activity-alias
+            android:label="@string/app_name"
+            android:icon="@mipmap/mp_launcher_pool"
+            android:name="com.vk.android.launcher.icons.IconAlias.EventIconDuplicate7"
+            android:enabled="false"
+            android:exported="true"
+            android:targetActivity="com.vkontakte.android.MainActivity"
+            android:roundIcon="@mipmap/ic_launcher_pool_round">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="@xml/shortcuts"/>
+        </activity-alias>
+        <activity-alias
+            android:label="@string/app_name"
+            android:icon="@mipmap/mp_launcher"
+            android:name="com.vk.android.launcher.icons.IconAlias.EventIconDuplicate6"
+            android:enabled="false"
+            android:exported="true"
+            android:targetActivity="com.vkontakte.android.MainActivity"
+            android:roundIcon="@mipmap/ic_launcher_round">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="@xml/shortcuts"/>
+        </activity-alias>
+        <activity-alias
+            android:label="@string/app_name"
+            android:icon="@mipmap/mp_launcher_cactus"
+            android:name="com.vk.android.launcher.icons.IconAlias.EventIconDuplicate5"
+            android:enabled="false"
+            android:exported="true"
+            android:targetActivity="com.vkontakte.android.MainActivity"
+            android:roundIcon="@mipmap/ic_launcher_cactus_round">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="@xml/shortcuts"/>
+        </activity-alias>
+        <activity-alias
+            android:label="@string/app_name"
+            android:icon="@mipmap/mp_launcher_cartoon"
+            android:name="com.vk.android.launcher.icons.IconAlias.EventIconDuplicate4"
+            android:enabled="false"
+            android:exported="true"
+            android:targetActivity="com.vkontakte.android.MainActivity"
+            android:roundIcon="@mipmap/ic_launcher_cartoon_round">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="@xml/shortcuts"/>
+        </activity-alias>
+        <activity-alias
+            android:label="@string/app_name"
+            android:icon="@mipmap/mp_launcher"
+            android:name="com.vk.android.launcher.icons.IconAlias.EventIconDuplicate3"
+            android:enabled="false"
+            android:exported="true"
+            android:targetActivity="com.vkontakte.android.MainActivity"
+            android:roundIcon="@mipmap/ic_launcher_round">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="@xml/shortcuts"/>
+        </activity-alias>
+        <activity-alias
+            android:label="@string/app_name"
+            android:icon="@mipmap/mp_launcher_coloringbook"
+            android:name="com.vk.android.launcher.icons.IconAlias.EventIconDuplicate2"
+            android:enabled="false"
+            android:exported="true"
+            android:targetActivity="com.vkontakte.android.MainActivity"
+            android:roundIcon="@mipmap/ic_launcher_coloringbook_round">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="@xml/shortcuts"/>
+        </activity-alias>
+        <activity-alias
+            android:label="@string/app_name"
+            android:icon="@mipmap/mp_launcher_ducks"
+            android:name="com.vk.android.launcher.icons.IconAlias.EventIconDuplicate1"
+            android:enabled="false"
+            android:exported="true"
+            android:targetActivity="com.vkontakte.android.MainActivity"
+            android:roundIcon="@mipmap/ic_launcher_ducks_round">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="@xml/shortcuts"/>
+        </activity-alias>
+        <activity-alias
+            android:label="@string/app_name"
+            android:icon="@mipmap/mp_launcher"
+            android:name="com.vk.android.launcher.icons.IconAlias.EventIcon7"
+            android:enabled="false"
+            android:exported="true"
+            android:targetActivity="com.vkontakte.android.MainActivity"
+            android:roundIcon="@mipmap/ic_launcher_round">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="@xml/shortcuts"/>
+        </activity-alias>
+        <activity-alias
+            android:label="@string/app_name"
+            android:icon="@mipmap/mp_launcher"
+            android:name="com.vk.android.launcher.icons.IconAlias.EventIcon6"
+            android:enabled="false"
+            android:exported="true"
+            android:targetActivity="com.vkontakte.android.MainActivity"
+            android:roundIcon="@mipmap/ic_launcher_round">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="@xml/shortcuts"/>
+        </activity-alias>
+        <activity-alias
+            android:label="@string/app_name"
+            android:icon="@mipmap/mp_launcher"
+            android:name="com.vk.android.launcher.icons.IconAlias.EventIcon5"
+            android:enabled="false"
+            android:exported="true"
+            android:targetActivity="com.vkontakte.android.MainActivity"
+            android:roundIcon="@mipmap/ic_launcher_round">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="@xml/shortcuts"/>
+        </activity-alias>
+        <activity-alias
+            android:label="@string/app_name"
+            android:icon="@mipmap/mp_launcher"
+            android:name="com.vk.android.launcher.icons.IconAlias.EventIcon4"
+            android:enabled="false"
+            android:exported="true"
+            android:targetActivity="com.vkontakte.android.MainActivity"
+            android:roundIcon="@mipmap/ic_launcher_round">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="@xml/shortcuts"/>
+        </activity-alias>
+        <activity-alias
+            android:label="@string/app_name"
+            android:icon="@mipmap/mp_launcher"
+            android:name="com.vk.android.launcher.icons.IconAlias.EventIcon3"
+            android:enabled="false"
+            android:exported="true"
+            android:targetActivity="com.vkontakte.android.MainActivity"
+            android:roundIcon="@mipmap/ic_launcher_round">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="@xml/shortcuts"/>
+        </activity-alias>
+        <activity-alias
+            android:label="@string/app_name"
+            android:icon="@mipmap/mp_launcher"
+            android:name="com.vk.android.launcher.icons.IconAlias.EventIcon2"
+            android:enabled="false"
+            android:exported="true"
+            android:targetActivity="com.vkontakte.android.MainActivity"
+            android:roundIcon="@mipmap/ic_launcher_round">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="@xml/shortcuts"/>
+        </activity-alias>
+        <activity-alias
+            android:label="@string/app_name"
+            android:icon="@mipmap/mp_launcher"
+            android:name="com.vk.android.launcher.icons.IconAlias.EventIcon1"
+            android:enabled="false"
+            android:exported="true"
+            android:targetActivity="com.vkontakte.android.MainActivity"
+            android:roundIcon="@mipmap/ic_launcher_round">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="@xml/shortcuts"/>
+        </activity-alias>
+        <activity-alias
+            android:label="@string/app_name"
+            android:icon="@mipmap/mp_launcher_dev3"
+            android:name="com.vk.android.launcher.icons.IconAlias.StaticIconDev4"
+            android:enabled="false"
+            android:exported="true"
+            android:targetActivity="com.vkontakte.android.MainActivity"
+            android:roundIcon="@mipmap/ic_launcher_dev3_round">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="@xml/shortcuts"/>
+        </activity-alias>
+        <activity-alias
+            android:label="@string/app_name"
+            android:icon="@mipmap/mp_launcher_dev2"
+            android:name="com.vk.android.launcher.icons.IconAlias.StaticIconDev3"
+            android:enabled="false"
+            android:exported="true"
+            android:targetActivity="com.vkontakte.android.MainActivity"
+            android:roundIcon="@mipmap/ic_launcher_dev2_round">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="@xml/shortcuts"/>
+        </activity-alias>
+        <activity-alias
+            android:label="@string/app_name"
+            android:icon="@mipmap/mp_launcher_test"
+            android:name="com.vk.android.launcher.icons.IconAlias.StaticIconDev2"
+            android:enabled="false"
+            android:exported="true"
+            android:targetActivity="com.vkontakte.android.MainActivity"
+            android:roundIcon="@mipmap/ic_launcher_test_round">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="@xml/shortcuts"/>
+        </activity-alias>
+        <activity-alias
+            android:label="@string/app_name"
+            android:icon="@mipmap/mp_launcher_dev"
+            android:name="com.vk.android.launcher.icons.IconAlias.StaticIconDev"
+            android:enabled="false"
+            android:exported="true"
+            android:targetActivity="com.vkontakte.android.MainActivity"
+            android:roundIcon="@mipmap/ic_launcher_dev_round">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="@xml/shortcuts"/>
+        </activity-alias>
+        <activity-alias
+            android:label="@string/app_name"
+            android:icon="@mipmap/mp_launcher_cyberpunk"
+            android:name="com.vk.android.launcher.icons.IconAlias.StaticIcon6"
+            android:enabled="false"
+            android:exported="true"
+            android:targetActivity="com.vkontakte.android.MainActivity"
+            android:roundIcon="@mipmap/ic_launcher_cyberpunk_round">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="@xml/shortcuts"/>
+        </activity-alias>
+        <activity-alias
+            android:label="@string/app_name"
+            android:icon="@mipmap/mp_launcher_balloon"
+            android:name="com.vk.android.launcher.icons.IconAlias.StaticIcon5"
+            android:enabled="false"
+            android:exported="true"
+            android:targetActivity="com.vkontakte.android.MainActivity"
+            android:roundIcon="@mipmap/ic_launcher_balloon_round">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="@xml/shortcuts"/>
+        </activity-alias>
+        <activity-alias
+            android:label="@string/app_name"
+            android:icon="@mipmap/mp_launcher"
+            android:name="com.vk.android.launcher.icons.IconAlias.StaticIcon4"
+            android:enabled="false"
+            android:exported="true"
+            android:targetActivity="com.vkontakte.android.MainActivity"
+            android:roundIcon="@mipmap/ic_launcher_round">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="@xml/shortcuts"/>
+        </activity-alias>
+        <activity-alias
+            android:label="@string/app_name"
+            android:icon="@mipmap/mp_launcher_shine"
+            android:name="com.vk.android.launcher.icons.IconAlias.StaticIcon3"
+            android:enabled="false"
+            android:exported="true"
+            android:targetActivity="com.vkontakte.android.MainActivity"
+            android:roundIcon="@mipmap/ic_launcher_shine_round">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="@xml/shortcuts"/>
+        </activity-alias>
+        <activity-alias
+            android:label="@string/app_name"
+            android:icon="@mipmap/mp_launcher"
+            android:name="com.vk.android.launcher.icons.IconAlias.StaticIcon2"
+            android:enabled="false"
+            android:exported="true"
+            android:targetActivity="com.vkontakte.android.MainActivity"
+            android:roundIcon="@mipmap/ic_launcher_round">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="@xml/shortcuts"/>
+        </activity-alias>
+        <activity-alias
+            android:label="@string/app_name"
+            android:icon="@mipmap/mp_launcher_fresh"
+            android:name="com.vk.android.launcher.icons.IconAlias.StaticIcon1"
+            android:enabled="false"
+            android:exported="true"
+            android:targetActivity="com.vkontakte.android.MainActivity"
+            android:roundIcon="@mipmap/ic_launcher_fresh_round">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="@xml/shortcuts"/>
+        </activity-alias>
+        <activity-alias
+            android:label="@string/app_name"
+            android:icon="@mipmap/mp_launcher"
+            android:name="com.vk.android.launcher.icons.IconAlias.DefaultIcon"
+            android:enabled="true"
+            android:exported="true"
+            android:targetActivity="com.vkontakte.android.MainActivity"
+            android:roundIcon="@mipmap/ic_launcher_round">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="@xml/shortcuts"/>
+        </activity-alias>
+        <activity-alias
+            android:name="com.vkontakte.android.AndroidUMainActivity"
+            android:permission="android.permission.START_VIEW_PERMISSION_USAGE"
+            android:exported="true"
+            android:targetActivity="com.vkontakte.android.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW_PERMISSION_USAGE"/>
+                <category android:name="android.intent.category.HEALTH_PERMISSIONS"/>
+            </intent-filter>
+        </activity-alias>
+        <activity
+            android:theme="@style/SplashTheme"
+            android:label=""
+            android:name="com.vkontakte.android.FragmentWrapperActivity"
+            android:exported="true"
+            android:configChanges="screenSize|uiMode|orientation|keyboardHidden|keyboard"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="androidx.health.ACTION_SHOW_PERMISSIONS_RATIONALE"/>
+            </intent-filter>
+        </activity>
+        <activity-alias
+            android:name="com.vkontakte.android.AndroidUFragmentWrapperActivity"
+            android:permission="android.permission.START_VIEW_PERMISSION_USAGE"
+            android:exported="true"
+            android:targetActivity="com.vkontakte.android.FragmentWrapperActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW_PERMISSION_USAGE"/>
+                <category android:name="android.intent.category.HEALTH_PERMISSIONS"/>
+            </intent-filter>
+        </activity-alias>
+        <activity
+            android:name="com.vk.clips.playlists.ui.picker.ClipsPlaylistPickerFragmentWrapperActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="smallestScreenSize|screenSize|screenLayout|orientation|keyboardHidden|keyboard"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:name="com.vk.libvideo.ui.SingleClipFragmentWrapperActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="smallestScreenSize|screenSize|screenLayout|orientation|keyboardHidden|keyboard"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:theme="@style/AttachTransparentTheme"
+            android:label="@string/attach_photo"
+            android:name="com.vk.attachpicker.impl.ImagePickerActivity"
+            android:configChanges="screenSize|orientation|keyboardHidden|keyboard"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:label="@string/auth"
+            android:name="com.vk.auth.main.AuthActivity"
+            android:configChanges="screenSize|orientation|keyboardHidden|keyboard"
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity
+            android:theme="@style/VkSuperappkit.Light.Transparent"
+            android:label="@string/auth"
+            android:name="com.vk.auth.main.AuthActivity.OauthActivity"
+            android:configChanges="screenSize|orientation|keyboardHidden|keyboard"
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity
+            android:theme="@style/TransparentTheme"
+            android:label=""
+            android:name="com.vkontakte.android.RepostActivity"
+            android:configChanges="screenSize|orientation|keyboardHidden|keyboard"/>
+        <activity
+            android:theme="@style/BaseStyle.PopupIfTablet"
+            android:label=""
+            android:name="com.vkontakte.android.TabletDialogActivity"
+            android:configChanges="screenSize|orientation|keyboardHidden|keyboard"/>
+        <activity
+            android:theme="@style/BaseStyle.Dialog"
+            android:label=""
+            android:name="com.vkontakte.android.FragmentDialogActivity"
+            android:configChanges="screenSize|orientation|keyboardHidden|keyboard"/>
+        <activity
+            android:theme="@style/VkSuperappkit.Light"
+            android:label=""
+            android:name="com.vk.auth.personalaccount.VkPersonalAccountActivity"
+            android:exported="true"
+            android:configChanges="smallestScreenSize|screenSize|screenLayout|orientation|keyboardHidden|keyboard"/>
+        <activity
+            android:theme="@style/VkSuperappkit.Light"
+            android:label=""
+            android:name="com.vk.auth.changepassword.VkChangePasswordActivity"
+            android:exported="true"
+            android:configChanges="smallestScreenSize|screenSize|screenLayout|orientation|keyboardHidden|keyboard">
+            <intent-filter>
+                <action android:name="com.vkontakte.android.action.CHANGE_PASSWORD_V1"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/SplashTheme"
+            android:label="@string/app_name"
+            android:name="com.vkontakte.android.LinkRedirActivity"
+            android:exported="true"
+            android:configChanges="screenSize|orientation|keyboardHidden|keyboard">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="vklink"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data
+                    android:scheme="vkontakte"
+                    android:pathPattern="/.*"/>
+                <data
+                    android:scheme="vk"
+                    android:pathPattern="/.*"/>
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="http"/>
+                <data android:scheme="https"/>
+                <data
+                    android:host="vk.com"
+                    android:pathPattern="/.*"/>
+                <data
+                    android:host="m.vk.com"
+                    android:pathPattern="/.*"/>
+                <data
+                    android:host="vk.me"
+                    android:pathPattern="/.*"/>
+                <data
+                    android:host="vk.link"
+                    android:pathPattern="/.*"/>
+                <data
+                    android:host="vk.ru"
+                    android:pathPattern="/.*"/>
+                <data
+                    android:host="m.vk.ru"
+                    android:pathPattern="/.*"/>
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data
+                    android:scheme="http"
+                    android:host="qr.vk.com"
+                    android:pathPattern="/ca.*"/>
+                <data
+                    android:scheme="https"
+                    android:host="qr.vk.com"
+                    android:pathPattern="/ca.*"/>
+                <data
+                    android:scheme="http"
+                    android:host="qr.vk.ru"
+                    android:pathPattern="/ca.*"/>
+                <data
+                    android:scheme="https"
+                    android:host="qr.vk.ru"
+                    android:pathPattern="/ca.*"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="content"/>
+                <data android:mimeType="@string/vnd_sendmsg"/>
+                <data android:mimeType="@string/vnd_profile"/>
+                <data android:mimeType="@string/vnd_voipcall"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.NOTIFICATION_PREFERENCES"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/TranslucentStyle"
+            android:label=""
+            android:name="com.vkontakte.android.PostPhotoActivity"
+            android:configChanges="screenSize|orientation|keyboardHidden|keyboard"/>
+        <activity
+            android:theme="@style/VkMilkLightStyle.Validation"
+            android:label="@string/message"
+            android:name="com.vkontakte.android.ValidationActivity"
+            android:configChanges="screenSize|orientation|keyboardHidden|keyboard"/>
+        <activity
+            android:theme="@style/VideoPlayerTranslucentStyle"
+            android:label="@string/video"
+            android:name="com.vk.libvideo.screen.VideoActivity"
+            android:configChanges="screenSize|orientation|keyboardHidden|keyboard"/>
+        <activity
+            android:theme="@style/VideoPlayerTranslucentStyle"
+            android:label="@string/video"
+            android:name="com.vk.libvideo.pip.VideoPipActivity"
+            android:taskAffinity="com.vk.libvideo.pip.VideoPipActivity"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"
+            android:configChanges="smallestScreenSize|screenSize|screenLayout|orientation|keyboardHidden|keyboard"
+            android:supportsPictureInPicture="true"/>
+        <activity
+            android:label="@string/video"
+            android:name="com.vk.libvideo.VideoWrapperActivity"
+            android:configChanges="screenSize|orientation|keyboardHidden|keyboard"/>
+        <activity
+            android:theme="@style/TranslucentStyle"
+            android:label="@string/app_name"
+            android:name="com.vkontakte.android.sharing.SharingExternalActivity"
+            android:exported="true"
+            android:configChanges="screenSize|uiMode|orientation|keyboardHidden|keyboard">
+            <intent-filter android:label="@string/app_name">
+                <action android:name="android.intent.action.SEND"/>
+                <action android:name="android.intent.action.SEND_MULTIPLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="*/*"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.service.chooser.chooser_target_service"
+                android:value="androidx.sharetarget.ChooserTargetServiceCompat"/>
+        </activity>
+        <activity
+            android:theme="@style/TranslucentStyle"
+            android:name="com.vk.stories.StoryShareActivity"
+            android:exported="true"
+            android:configChanges="screenSize|uiMode|orientation|keyboardHidden|keyboard">
+            <intent-filter android:label="@string/stories">
+                <action android:name="android.intent.action.SEND"/>
+                <action android:name="android.intent.action.SEND_MULTIPLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="image/*"/>
+            </intent-filter>
+            <intent-filter android:label="@string/stories">
+                <action android:name="android.intent.action.SEND"/>
+                <action android:name="android.intent.action.SEND_MULTIPLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="video/*"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/TranslucentStyle"
+            android:label=""
+            android:name="com.vkontakte.android.ConfirmationActivity"
+            android:configChanges="screenSize|uiMode|orientation|keyboardHidden|keyboard"/>
+        <activity
+            android:label="@string/suggest_friends"
+            android:name="com.vkontakte.android.SuggestionsActivity"
+            android:configChanges="screenSize|orientation|keyboardHidden|keyboard"/>
+        <activity
+            android:label="@string/suggest_friends"
+            android:name="com.vk.socialgraph.SocialGraphActivity"
+            android:configChanges="screenSize|orientation|keyboardHidden|keyboard"/>
+        <activity
+            android:theme="@style/TranslucentStyle"
+            android:label=""
+            android:name="com.vkontakte.android.NotificationActivity"
+            android:configChanges="screenSize|orientation|keyboardHidden|keyboard"/>
+        <activity
+            android:label="@string/auth"
+            android:name="com.vkontakte.android.SDKAuthActivity"
+            android:exported="true"
+            android:configChanges="screenSize|orientation|keyboardHidden|keyboard">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="com.vkontakte.android.action.SDK_AUTH"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.vkontakte.android.sdk.SDKInviteActivity"
+            android:exported="true"
+            android:configChanges="screenSize|orientation|keyboardHidden|keyboard"/>
+        <activity
+            android:label="@string/friends"
+            android:name="com.vkontakte.android.sdk.SDKFriendPickerActivity"
+            android:configChanges="screenSize|orientation|keyboardHidden|keyboard"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:theme="@style/TransparentTheme"
+            android:name="com.vk.promo.calls.CallsPromoActivity"
+            android:configChanges="smallestScreenSize|screenSize|screenLayout|orientation|keyboardHidden|keyboard"/>
+        <activity
+            android:theme="@style/TranslucentStyle"
+            android:label="@string/change_password"
+            android:name="com.vkontakte.android.ChangePasswordActivity"
+            android:configChanges="screenSize|uiMode|orientation|keyboardHidden|keyboard"/>
+        <activity
+            android:label="@string/wall"
+            android:name="com.vkontakte.android.TestActivity"
+            android:exported="true"
+            android:configChanges="screenSize|orientation|keyboardHidden|keyboard">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data
+                    android:scheme="vkontakte"
+                    android:host="test"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/TranslucentStyle"
+            android:label="confirmation"
+            android:name="com.vkontakte.android.ConfirmActionActivity"
+            android:configChanges="screenSize|orientation|keyboardHidden|keyboard"/>
+        <activity
+            android:theme="@style/AttachTransparentTheme"
+            android:name="com.vk.attachpicker.impl.AttachActivity"
+            android:configChanges="screenSize|uiMode|orientation|keyboardHidden|keyboard"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:theme="@style/PickerPhotoVideoActivity"
+            android:name="com.vk.attachpicker.PhotoVideoAttachActivity"
+            android:configChanges="screenSize|uiMode|orientation|keyboardHidden|keyboard"/>
+        <activity
+            android:theme="@style/PickerImageEditorActivity"
+            android:name="com.vk.attachpicker.impl.PhotoEditorActivity"
+            android:configChanges="screenSize|orientation|keyboardHidden|keyboard"/>
+        <activity
+            android:theme="@style/StoryViewActivityThemeMilk"
+            android:name="com.vk.upload.StoryUploadActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="smallestScreenSize|screenSize|screenLayout|orientation|keyboardHidden|keyboard"/>
+        <activity
+            android:theme="@style/StoryViewActivityThemeMilk"
+            android:name="com.vk.upload.video.activities.VideoPublishActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="smallestScreenSize|screenSize|screenLayout|orientation|keyboardHidden|keyboard"/>
+        <activity
+            android:theme="@style/StoryFullscreenActivityTheme"
+            android:name="com.vk.story.viewer.impl.presentation.stories.StoryViewActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="screenSize|uiMode|orientation|keyboardHidden|keyboard"/>
+        <activity
+            android:theme="@style/StoryActivityTheme"
+            android:name="com.vk.stories.StorySettingsActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="screenSize|orientation|keyboardHidden|keyboard"/>
+        <activity
+            android:theme="@style/StoryActivityTheme"
+            android:name="com.vk.stories.StoryPrivacySettingsActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="screenSize|orientation|keyboardHidden|keyboard"/>
+        <activity
+            android:theme="@style/BaseStyle.StatusBar"
+            android:label=""
+            android:name="com.vk.music.attach.AttachMusicActivity"
+            android:configChanges="screenSize|orientation|keyboardHidden|keyboard"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:theme="@style/VkIm.Theme.ChatInvite"
+            android:label=""
+            android:name="com.vkontakte.android.fragments.messages.chat_invite.accept.ChatInviteActivity"
+            android:excludeFromRecents="true"
+            android:configChanges="orientation"
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity
+            android:name="com.vk.voip.invite.AnonymCallInviteActivity"
+            android:configChanges="screenSize|orientation|keyboardHidden|keyboard"
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity
+            android:theme="@style/TransparentTheme"
+            android:name="com.vk.voip.ui.join.JoinCallActivity"
+            android:configChanges="screenSize|orientation|keyboardHidden|keyboard"
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity
+            android:theme="@style/PushOpenTheme"
+            android:name="com.vk.pushes.PushOpenActivity"/>
+        <activity
+            android:name="ru.ok.android.sdk.OkAuthActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data
+                    android:scheme="okauth"
+                    android:host="ok1258261760"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/PostingAttachScreenTheme"
+            android:label=""
+            android:name="com.vk.newsfeed.impl.posting.attachments.PostingAttachActivity"
+            android:configChanges="screenSize|orientation|keyboardHidden|keyboard"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:theme="@style/TransparentTheme"
+            android:label=""
+            android:name="com.vk.music.player.StandalonePlayerActivity"
+            android:launchMode="singleTop"
+            android:configChanges="screenSize|orientation|keyboardHidden|keyboard"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:name="com.vk.avatarchange.AvatarChangeActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="screenSize|orientation"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:name="com.vk.assistants.marusia.day_skill.configuration.DaySkillWidgetConfigurationActivity"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.vkontakte.android.activities.AssistantSendMsgActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.voicesearch.SEND_MESSAGE_TO_CONTACTS"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="text/plain"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/TransparentTheme"
+            android:name="com.vk.pushes.receivers.NotificationActionsTrampolineActivity"/>
+        <activity
+            android:theme="@style/TransparentTheme"
+            android:name="com.vk.music.utils.MusicPlayerNotificationTrampolineActivity"/>
+        <activity
+            android:theme="@style/TransparentTheme"
+            android:name="com.vk.superapp.vkrun.notifications.helpers.VkRunNotificationTrampolineActivity"/>
+        <service android:name="com.vkontakte.android.AssistantVerificationService"/>
+        <service
+            android:name="com.vkontakte.android.sync.online.VkOnlineService"
+            android:exported="false"/>
+        <service
+            android:name="com.vkontakte.android.audio.player.PlayerService"
+            android:foregroundServiceType="mediaPlayback"/>
+        <service android:name="com.vk.superapp.vkrun.notifications.service.VkRunNotificationService"/>
+        <service android:name="com.my.tracker.campaign.CampaignService"/>
+        <service
+            android:name="com.vkontakte.android.auto.MusicAndroidAutoMediaService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.media.browse.MediaBrowserService"/>
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.vk.assistants.marusia.day_skill.DaySkillWidgetService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:enabled="true"
+            android:exported="false"/>
+        <service
+            android:name="com.vk.assistants.marusia.system_assistant.MarusiaInteractionService"
+            android:permission="android.permission.BIND_VOICE_INTERACTION"
+            android:exported="true"
+            android:process=":voice_interactor">
+            <meta-data
+                android:name="android.voice_interaction"
+                android:resource="@xml/interaction_service"/>
+            <intent-filter>
+                <action android:name="android.service.voice.VoiceInteractionService"/>
+            </intent-filter>
+        </service>
+        <activity
+            android:name="com.my.target.common.MyTargetActivity"
+            android:configChanges="smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard"/>
+        <receiver
+            android:name="androidx.media.session.MediaButtonReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_BUTTON"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:label="@string/vk_marusia_day_skill_widget_title"
+            android:name="com.vk.assistants.marusia.day_skill.DaySkillWidgetProvider"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/vk_marusia_day_skill_widget_provider"/>
+        </receiver>
+        <receiver android:name="com.vk.assistants.marusia.reminder_skill.scheduling.MarusiaReminderReceiver"/>
+        <receiver
+            android:label="@string/widget_player"
+            android:name="com.vk.music.player.presentation.widgets.PlayerSmallWidget"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_player_provider"/>
+        </receiver>
+        <receiver
+            android:label="@string/widget_player_big"
+            android:name="com.vk.music.player.presentation.widgets.PlayerBigWidget"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_player_big_provider"/>
+        </receiver>
+        <receiver android:name="com.vkontakte.android.BirthdayBroadcastReceiver"/>
+        <receiver
+            android:name="com.vkontakte.android.DebugBroadcastReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SECRET_CODE"/>
+                <data
+                    android:scheme="android_secret_code"
+                    android:host="856682583"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.vkontakte.android.PackageAddedReceiver"
+            android:enabled="false"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.my.tracker.campaign.CampaignReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.vk.pushes.receivers.NotificationActionsReceiver"/>
+        <receiver android:name="com.vk.pushes.receivers.NotificationDeleteReceiver"/>
+        <provider
+            android:name="com.vk.security.content.VKFileProvider"
+            android:exported="false"
+            android:authorities="@string/vk_file_provider_authority"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"/>
+        </provider>
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:exported="false"
+            android:authorities="com.vkontakte.android.androidx-startup"/>
+        <service
+            android:name="ru.mail.libverify.platform.firebase.gcm.GcmMessageHandlerService"
+            android:enabled="false"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <uses-library
+            android:name="com.sec.android.app.multiwindow"
+            android:required="false"/>
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="3"/>
+        <meta-data
+            android:name="com.sec.android.support.multiwindow"
+            android:value="true"/>
+        <meta-data
+            android:name="com.sec.android.multiwindow.DEFAULT_SIZE_W"
+            android:resource="@dimen/app_defaultsize_w"/>
+        <meta-data
+            android:name="com.sec.android.multiwindow.DEFAULT_SIZE_H"
+            android:resource="@dimen/app_defaultsize_h"/>
+        <meta-data
+            android:name="com.sec.android.multiwindow.MINIMUM_SIZE_W"
+            android:resource="@dimen/app_minimumsize_w"/>
+        <meta-data
+            android:name="com.sec.android.multiwindow.MINIMUM_SIZE_H"
+            android:resource="@dimen/app_minimumsize_h"/>
+        <meta-data
+            android:name="optimization_key"
+            android:value="lONMnJymOutPww6aDtTpqGS77DtnW6hlwIrhgDPTGGyu+UvR7aR+nf8V4tSiVPyOZXgsTxne0umX209UUetCDGLXYcoMZLz/mNX4osYj/ACdI+6N7zFlO9+4L4vWJhlL59TKmQ3LDPyrd+InYdPl/WYwPBCBeeSMOPXVpUWEQsMH301NstEjSBZv+O0QzeuQS9/Jy94iop4kyFEtDkslfk6DyFEqeBLMA+D34UUhhsjwrwLC9FDtKJFTgSvfWbL0yT8GyNrUlsBlyRFsMUs6VvrMVJ9pft1rFEnn78jsaD8HrAWaIeq+DBjZ1KRokb2OI7U/XP14lbYMpLo4LgvfeQ=="/>
+        <meta-data
+            android:name="com.samsung.android.icon_container.has_icon_container"
+            android:value="true"/>
+        <meta-data
+            android:name="asset_statements"
+            android:resource="@string/asset_statements"/>
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false"/>
+        <meta-data
+            android:name="com.google.android.gms.wallet.api.enabled"
+            android:value="true"/>
+        <meta-data
+            android:name="com.vk.benchmark.is_profileable"
+            android:value="false"/>
+        <profileable android:shell="false"/>
+        <meta-data
+            android:name="com.vk.IS_DYNAMIC_BUILD"
+            android:value="false"/>
+        <activity
+            android:name="com.vk.attachpicker.impl.graffiti.presentation.GraffitiDrawingActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="screenSize|orientation|keyboardHidden|keyboard"/>
+        <activity
+            android:theme="@style/ClipsChoosePreviewActivityThemeMilk"
+            android:name="com.vk.clips.edit.choose.preview.ClipsChoosePreviewFromGalleryActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="smallestScreenSize|screenSize|screenLayout|orientation|keyboardHidden|keyboard"/>
+        <activity
+            android:theme="@style/ClipsChoosePreviewActivityThemeMilk"
+            android:name="com.vk.clips.edit.preview.ClipsChoosePreviewActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="smallestScreenSize|screenSize|screenLayout|orientation|keyboardHidden|keyboard"/>
+        <activity
+            android:theme="@style/ClipsViewActivityThemeMilk"
+            android:name="com.vk.clips.upload.ClipsUploadActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="smallestScreenSize|screenSize|screenLayout|orientation|keyboardHidden|keyboard"/>
+        <activity
+            android:label="@string/user_profile_accessibility_cover_crop"
+            android:name="com.vk.profile.user.impl.ui.edit.cover.crop.CoverCropActivity"/>
+        <activity
+            android:name="com.vk.profile.user.impl.ui.edit.cover.picker.CoverPickerActivity"
+            android:configChanges="smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard"/>
+        <activity
+            android:theme="@style/AvatarPickerStyle"
+            android:label=""
+            android:name="com.vk.avatarpicker.AvatarPickerActivity"
+            android:configChanges="screenSize|orientation|keyboardHidden|keyboard"/>
+        <activity
+            android:theme="@style/Theme.App.Transparent"
+            android:label=""
+            android:name="com.vk.sharing.im_engine_impl.SharingImEngineActivity"
+            android:configChanges="screenSize|keyboardHidden"
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <service android:name="com.vk.sharing.core.SharingService"/>
+        <activity
+            android:theme="@style/Theme.App.Transparent"
+            android:label=""
+            android:name="com.vk.sharing.core.picker.GroupPickerActivity"
+            android:configChanges="screenSize|keyboardHidden"
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity
+            android:theme="@style/Theme.App.Transparent"
+            android:label=""
+            android:name="com.vk.sharing.core.picker.PortraitPickerActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity
+            android:theme="@style/Theme.App.Transparent"
+            android:label=""
+            android:name="com.vk.sharing.core.picker.ClipsAuthorPickerActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity
+            android:name="com.vk.voip.stereo.impl.room.presentation.activity.StereoRoomActivity"
+            android:taskAffinity="com.vk.voip.stereo.room"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:configChanges="smallestScreenSize|screenSize|screenLayout|orientation"
+            android:supportsPictureInPicture="true"/>
+        <activity
+            android:theme="@style/TransparentTheme"
+            android:name="com.vk.voip.stereo.impl.room.presentation.service.notifications.StereoRoomNotificationsTrampolineActivity"/>
+        <activity
+            android:theme="@style/TransparentTheme"
+            android:name="com.vk.voip.stereo.impl.about.presentation.activity.StereoAboutActivity"
+            android:configChanges="screenSize|orientation|keyboardHidden|keyboard"
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity
+            android:theme="@style/TransparentTheme"
+            android:name="com.vk.voip.stereo.impl.join.presentation.activity.StereoJoinActivity"
+            android:configChanges="screenSize|orientation|keyboardHidden|keyboard"
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <service
+            android:name="com.vk.voip.stereo.impl.room.presentation.service.StereoRoomService"
+            android:foregroundServiceType="microphone|mediaProjection|phoneCall"/>
+        <service
+            android:name="com.vk.voip.stereo.impl.room.presentation.pip.overlay.StereoPictureInPictureOverlayService"
+            android:exported="false"/>
+        <receiver
+            android:name="com.vk.assistants.marusia.reminder_skill.BootReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.QUICKBOOT_POWERON"/>
+                <action android:name="com.htc.intent.action.QUICKBOOT_POWERON"/>
+            </intent-filter>
+        </receiver>
+        <service
+            android:name="com.vk.assistants.marusia.system_assistant.MarusiaInteractionSessionService"
+            android:permission="android.permission.BIND_VOICE_INTERACTION"
+            android:exported="true"/>
+        <service
+            android:name="com.vk.assistants.marusia.system_assistant.MarusiaRecognitionService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.speech.RecognitionService"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.speech"
+                android:resource="@xml/recognition_service"/>
+        </service>
+        <activity
+            android:theme="@style/TransparentTheme"
+            android:name="com.vk.assistants.marusia.system_assistant.activities.MarusiaProxySettingsActivity"
+            android:exported="true"
+            android:taskAffinity=""
+            android:excludeFromRecents="true"
+            android:noHistory="true"/>
+        <activity
+            android:theme="@style/TransparentTheme"
+            android:name="com.vk.assistants.marusia.system_assistant.activities.MarusiaDialogActivity"
+            android:exported="true"
+            android:taskAffinity=""
+            android:excludeFromRecents="true"
+            android:configChanges="smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard"
+            android:noHistory="true"/>
+        <service
+            android:name="com.vk.assistants.marusia.reminder_skill.SendReminderMsgService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:enabled="true"
+            android:exported="false"/>
+        <service
+            android:name="com.vk.superapp.pip.impl.overlay.MiniAppPiPOverlayService"
+            android:exported="false"/>
+        <service
+            android:name="com.vk.voip.miniapps.impl.picture_in_picture.overlay.MiniAppCallPiPOverlayService"
+            android:exported="false"/>
+        <activity
+            android:label=""
+            android:name="com.vk.voip.VoipCallActivity"
+            android:taskAffinity="com.vkontakte.android.voip"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:configChanges="smallestScreenSize|screenSize|screenLayout|orientation"
+            android:supportsPictureInPicture="true"/>
+        <activity
+            android:theme="@style/VkIm.Theme.ChatInvite"
+            android:label=""
+            android:name="com.vk.voip.invite.GroupCallInviteActivity"
+            android:excludeFromRecents="true"
+            android:configChanges="orientation"
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <service
+            android:name="com.vk.voip.VoipService"
+            android:foregroundServiceType="microphone|mediaProjection|phoneCall"/>
+        <activity
+            android:theme="@style/TransparentTheme"
+            android:name="com.vk.voip.ui.assessment.VoipAssessmentActivity"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTop"
+            android:configChanges="smallestScreenSize|screenSize|screenLayout|orientation|keyboardHidden|keyboard"/>
+        <activity
+            android:label=""
+            android:name="com.vk.voip.ui.broadcast.activity.UserRecordsWrapperActivity"
+            android:taskAffinity=""
+            android:launchMode="singleTask"
+            android:configChanges="orientation"
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity
+            android:label=""
+            android:name="com.vk.voip.ui.broadcast.activity.GroupRecordsWrapperActivity"
+            android:taskAffinity=""
+            android:launchMode="singleTask"
+            android:configChanges="orientation"
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity
+            android:theme="@style/VkIm.Theme.ChatInvite"
+            android:label=""
+            android:name="com.vk.voip.ui.room.AddRoomToCallActivity"
+            android:excludeFromRecents="true"
+            android:configChanges="orientation"
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity
+            android:theme="@style/VkIm.Theme.ChatInvite"
+            android:label=""
+            android:name="com.vk.voip.ui.qr.ui.VoipQrCodeScannerActivity"
+            android:excludeFromRecents="true"
+            android:configChanges="orientation"
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <service
+            android:name="com.vk.voip.ui.picture_in_picture.overlay.PictureInPictureOverlayService"
+            android:exported="false"/>
+        <receiver android:name="com.vk.voip.ui.notifications.incoming.IncomingCallNotifierBroadcastReceiver"/>
+        <receiver android:name="com.vk.voip.ui.notifications.ongoing.OngoingCallNotifierBroadcastReceiver"/>
+        <activity
+            android:theme="@style/TransparentTheme"
+            android:name="com.vk.voip.ui.notifications.incoming.IncomingCallNotificationsTrampolineActivity"/>
+        <activity
+            android:theme="@style/TransparentTheme"
+            android:name="com.vk.voip.ui.notifications.ongoing.OngoingCallNotificationsTrampolineActivity"/>
+        <activity
+            android:theme="@style/TransparentTheme"
+            android:name="com.vk.voip.ui.auth.CallsBridgeTrampolineActivity"/>
+        <activity
+            android:theme="@style/StoryFullscreenActivityTheme"
+            android:name="com.vk.storycamera.screen.StoryCameraActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard"/>
+        <activity
+            android:theme="@style/StoryGalleryTransparentTheme"
+            android:name="com.vk.storycamera.screen.StoryGalleryActivity"
+            android:configChanges="smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard"/>
+        <activity
+            android:theme="@style/StoryFullscreenActivityTheme.Modal"
+            android:name="com.vk.storycamera.screen.StoryCameraModalActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard"/>
+        <activity
+            android:theme="@style/VkSuperappkit.Light.Transparent"
+            android:name="com.vk.superapp.vkpay.checkout.feature.confirmation.googlepay.GooglePayInternalActivity"/>
+        <receiver
+            android:name="ru.mail.libverify.platform.firebase.sms.SmsRetrieverReceiver"
+            android:permission="com.google.android.gms.auth.api.phone.permission.SEND"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.gms.auth.api.phone.SMS_RETRIEVED"/>
+            </intent-filter>
+        </receiver>
+        <service
+            android:name="com.google.firebase.components.ComponentDiscoveryService"
+            android:exported="false"
+            android:directBootAware="true">
+            <meta-data
+                android:name="com.google.firebase.components:com.vk.metrics.firebase.crashlytics.ndk.CrashlyticsNdkRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.perf.FirebasePerfRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingKtxRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.storage.StorageRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.crashlytics.FirebaseCrashlyticsKtxRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.remoteconfig.RemoteConfigRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.sessions.FirebaseSessionsRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsKtxRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.abt.component.AbtRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar"/>
+        </service>
+        <receiver
+            android:name="com.vk.companion.receiver.AccountInfoBroadcastReceiver"
+            android:permission="com.vkontakte.android.permission.ACCESS_DATA"
+            android:exported="true"/>
+        <provider
+            android:name="com.vk.companion.provider.AccountInfoContentProvider"
+            android:permission="com.vkontakte.android.permission.ACCESS_DATA"
+            android:exported="true"
+            android:authorities="com.vkontakte.android.providers.account.info"/>
+        <service
+            android:name="com.vk.biometrics.lock.impl.service.HidePushContentService"
+            android:enabled="true"
+            android:exported="false"
+            android:foregroundServiceType="dataSync"/>
+        <receiver
+            android:name="com.vk.upload.impl.LoadingBroadcastReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.DOWNLOAD_COMPLETE"
+                    android:enabled="true"/>
+                <action
+                    android:name="com.vkontakte.android.UPLOAD_RETRY"
+                    android:enabled="true"/>
+            </intent-filter>
+        </receiver>
+        <provider
+            android:name="com.vk.appredirects.provider.AppRedirectContentProvider"
+            android:permission="com.vkontakte.android.permission.APP_REDIRECT"
+            android:exported="true"
+            android:process=":app_redirect"
+            android:authorities="com.vkontakte.android.vk_app_redirect_provider"/>
+        <activity
+            android:label=""
+            android:name="com.vk.libvideo.live.impl.broadcast_settings.BroadcastSettingsActivity"
+            android:configChanges="screenSize|orientation|keyboardHidden"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity
+            android:label="@string/live"
+            android:name="com.vk.libvideo.live.impl.activity.LivePlayerActivity"
+            android:configChanges="screenSize|orientation|keyboardHidden|keyboard"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity
+            android:name="com.vk.im.ui.ImActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="screenSize|uiMode|orientation|keyboardHidden|keyboard"
+            android:windowSoftInputMode="adjustResize"/>
+        <service
+            android:name="com.vk.libvideo.offline.VideoDownloadService"
+            android:foregroundServiceType="dataSync"/>
+        <receiver android:name="com.vk.libvideo.offline.VideoDownloadNotifierReceiver"/>
+        <service
+            android:name="com.vk.libvideo.autoplay.background.service.VideoBackgroundService"
+            android:foregroundServiceType="mediaPlayback"/>
+        <service
+            android:name="androidx.media3.exoplayer.scheduler.PlatformScheduler.PlatformSchedulerService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:exported="true"/>
+        <meta-data
+            android:name="com.google.android.gms.cast.framework.OPTIONS_PROVIDER_CLASS_NAME"
+            android:value="com.vk.libvideo.cast.CastOptionsProvider"/>
+        <service
+            android:name="com.vk.music.offline.mediastore.download.service.OfflineMusicDownloadService"
+            android:exported="false"
+            android:foregroundServiceType="dataSync">
+            <intent-filter>
+                <action android:name="com.google.android.exoplayer.downloadService.action.RESTART"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.vk.mediastore.media.offline.download.service.ACTION_DOWNLOAD_IMAGES"/>
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.vk.music.offline.mediastore.download.service.OfflineMusicDownloadBoundService"
+            android:exported="false"
+            android:foregroundServiceType="dataSync">
+            <intent-filter>
+                <action android:name="com.google.android.exoplayer.downloadService.action.RESTART"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.vk.mediastore.media.offline.download.service.ACTION_DOWNLOAD_IMAGES"/>
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.vk.audiomsg.player.service.AudioMsgPlayerNotificationService"
+            android:enabled="true"
+            android:exported="false"
+            android:stopWithTask="true"
+            android:foregroundServiceType="mediaPlayback"/>
+        <receiver
+            android:name="com.vk.audiomsg.player.service.AudioMsgIntentActionsReceiver"
+            android:enabled="true"
+            android:exported="false"
+            android:foregroundServiceType="mediaPlayback">
+            <intent-filter>
+                <action android:name="com.vk.audiomsg.player.service.ACTION_OPEN_HOLDER"/>
+                <action android:name="com.vk.audiomsg.player.service.ACTION_TOGGLE_PLAY_PAUSE"/>
+                <action android:name="com.vk.audiomsg.player.service.ACTION_CLEAR"/>
+            </intent-filter>
+        </receiver>
+        <activity
+            android:theme="@style/Theme.Transparent"
+            android:name="com.vk.tabbar.settings.impl.onboarding.TabbarOnboardingV2Activity"/>
+        <activity
+            android:theme="@style/Theme.Transparent"
+            android:name="com.vk.tabbar.settings.impl.suggests.TabbarSuggestActivity"/>
+        <service
+            android:label="@string/sync_dialog_title"
+            android:name="com.vk.contacts.ContactSyncAdapterService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.content.SyncAdapter"
+                android:resource="@xml/sync_contacts"/>
+            <meta-data
+                android:name="android.provider.CONTACTS_STRUCTURE"
+                android:resource="@xml/contacts_custom_type"/>
+        </service>
+        <activity
+            android:theme="@style/TransparentTheme"
+            android:label="@string/sync_dialog_title"
+            android:name="com.vk.contacts.ContactsSyncActivity"
+            android:exported="false"
+            android:configChanges="screenSize|orientation|keyboardHidden|keyboard">
+            <intent-filter>
+                <action android:name="com.vkontakte.android.SYNC_SETTINGS"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <meta-data
+            android:name="api_secret"
+            android:value="hHbZxrka2uZ6jB1inYsH"/>
+        <meta-data
+            android:name="api_id"
+            android:value="2274003"/>
+        <service
+            android:name="com.vk.signtoken.host.SigningTokenService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.vk.signtoken.action.SIGN_ANONYMOUS_TOKEN"/>
+            </intent-filter>
+        </service>
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/cornflower_blue"/>
+        <service
+            android:name="com.vk.vendor.pushes.proxy.VKPushService"
+            android:enabled="true"
+            android:exported="false"/>
+        <service
+            android:name="com.vk.vendor.pushes.FirebasePushService"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":com.vk.push.service"
+            android:stopWithTask="false">
+            <intent-filter android:priority="0xfffffff">
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <receiver
+            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND"
+            android:exported="true"
+            android:process=":com.vk.push.service">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+            </intent-filter>
+        </receiver>
+        <service
+            android:name="com.vk.push.rustore.impl.RuStorePushService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="ru.rustore.sdk.pushclient.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.vk.instantjobs.services.JobsBackgroundService"
+            android:enabled="true"
+            android:exported="false"
+            android:stopWithTask="false"/>
+        <service
+            android:name="com.vk.instantjobs.services.JobsForegroundService"
+            android:enabled="true"
+            android:exported="false"
+            android:stopWithTask="false"
+            android:foregroundServiceType="dataSync"/>
+        <receiver
+            android:name="com.vk.instantjobs.receivers.BootReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.QUICKBOOT_POWERON"/>
+                <action android:name="com.htc.intent.action.QUICKBOOT_POWERON"/>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.vk.instantjobs.receivers.InstantJobCancelReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.vk.instantjobs.receivers.ACTION_CANCEL"/>
+            </intent-filter>
+        </receiver>
+        <activity
+            android:label=""
+            android:name="com.vk.security.proxy.ProxySecurityActivity"
+            android:configChanges="screenSize|orientation|keyboardHidden|keyboard"/>
+        <service
+            android:name="com.vk.traceprofiler.TraceProfilerServiceImpl"
+            android:enabled="true"
+            android:exported="false"
+            android:stopWithTask="false"/>
+        <receiver
+            android:name="com.vk.traceprofiler.TraceProfilerReceiver"
+            android:enabled="true"
+            android:exported="false"/>
+        <meta-data
+            android:name="sak_version"
+            android:value="1.122\10"/>
+        <meta-data
+            android:name="com.vk.sdk.APP_ID"
+            android:value="2274003"/>
+        <meta-data
+            android:name="com.vk.accountmanager.enabled"
+            android:value="true"/>
+        <meta-data
+            android:name="com.vk.accountmanager.id"
+            android:value="@string/vk_account_manager_id"/>
+        <service
+            android:name="com.vk.accountmanager.domain.interactor.VkAccountAuthenticatorService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.accounts.AccountAuthenticator"
+                android:resource="@xml/vk_account_manager_authenticator"/>
+        </service>
+        <activity
+            android:theme="@style/VkSuperappkit.Light.Transparent"
+            android:name="com.vk.auth.external.VkExternalAuthActivity"
+            android:exported="true"
+            android:taskAffinity="com.vkontakte.android.vkc_external"
+            android:launchMode="singleTask"
+            android:configChanges="screenSize|orientation|keyboardHidden|keyboard"
+            android:windowSoftInputMode="adjustResize|stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data
+                    android:scheme="com.vkontakte.android"
+                    android:host="vkcexternalauth"/>
+                <data
+                    android:scheme="com.vkontakte.android"
+                    android:host="vkcexternalauth-codeflow"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/VkSuperappkit.Light.Transparent"
+            android:label=""
+            android:name="com.vk.auth.avatarpicker.AuthAvatarPickerActivity"
+            android:exported="false"/>
+        <activity
+            android:theme="@style/VkSuperappkit.Light"
+            android:label=""
+            android:name="com.vk.auth.main.VkClientAuthActivity"
+            android:configChanges="smallestScreenSize|screenSize|screenLayout|orientation|keyboardHidden"/>
+        <activity
+            android:theme="@style/VkSuperappkit.Light.Transparent"
+            android:label=""
+            android:name="com.vk.auth.main.VkClientAuthActivity.OauthActivity"
+            android:configChanges="smallestScreenSize|screenSize|screenLayout|orientation|keyboardHidden"/>
+        <activity
+            android:theme="@style/VkSuperappkit.Light.Transparent"
+            android:name="com.vk.auth.ui.password.askpassword.VkAskPasswordActivity"
+            android:configChanges="smallestScreenSize|screenSize|screenLayout|orientation|keyboardHidden|keyboard"/>
+        <activity
+            android:theme="@style/VkSuperappkit.Light.Transparent"
+            android:name="com.vk.auth.changepassword.VkChangePasswordProxyActivity"
+            android:exported="false"
+            android:configChanges="smallestScreenSize|screenSize|screenLayout|orientation|keyboardHidden|keyboard"/>
+        <activity
+            android:name="com.vk.superapp.browser.ui.VkBrowserActivity"
+            android:configChanges="smallestScreenSize|screenSize|screenLayout|orientation|keyboardHidden"/>
+        <activity
+            android:name="com.vk.superapp.browser.internal.ui.shortcats.ShortcutActivity"
+            android:exported="true"
+            android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <activity
+            android:name="com.vk.superapp.browser.internal.ui.communitypicker.VkCommunityPickerActivity"
+            android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <activity
+            android:name="com.vk.superapp.browser.ui.VkImagesPreviewActivity"
+            android:configChanges="screenSize|orientation"/>
+        <activity
+            android:name="com.vk.superapp.browser.internal.ui.friends.VkFriendsPickerActivity"
+            android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <activity
+            android:name="com.vk.superapp.browser.internal.ui.identity.fragments.VkIdentityActivity"
+            android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <receiver
+            android:name="com.vk.superapp.browser.utils.SuperAppLoadingBroadcastReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.DOWNLOAD_COMPLETE"
+                    android:enabled="true"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.vk.superapp.browser.internal.ui.shortcats.ShortcutSuccessReceiver"/>
+        <activity
+            android:theme="@style/VkSuperappkit.Light.Transparent"
+            android:name="com.vk.auth.captcha.impl.SakCaptchaActivity"
+            android:configChanges="smallestScreenSize|screenSize|screenLayout|orientation|keyboardHidden"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:name="com.vk.superapp.catalog.impl.v1.SuperappCatalogActivity"/>
+        <meta-data
+            android:name="com.vk.oauth.sber.VERIFICATION_CLIENT_ID"
+            android:value="68b5c3e0-33d4-437e-9139-0d6f4ec95cd9"/>
+        <meta-data
+            android:name="com.vk.oauth.sber.VERIFICATION_DEEPLINK_SCHEME"
+            android:value="vkid"/>
+        <activity
+            android:theme="@style/VkSuperappkit.Light.Transparent"
+            android:name="com.vk.oauth.sber.verification.VkSberVerificationActivity"
+            android:exported="true"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data
+                    android:scheme="vkid"
+                    android:host="@string/vk_sber_deeplink_host"/>
+            </intent-filter>
+        </activity>
+        <provider
+            android:name="com.vk.usersstore.contentprovider.UsersContentProvider"
+            android:readPermission="com.vkontakte.android.usersstore.permission.LOAD"
+            android:writePermission="com.vkontakte.android.usersstore.permission.SAVE"
+            android:exported="true"
+            android:authorities="com.vkontakte.android.UsersContentProvider"/>
+        <activity
+            android:theme="@style/VkSuperappkit.Light.Transparent"
+            android:name="com.vk.auth.DefaultAuthActivity.BottomSheetActivity"
+            android:configChanges="screenSize|orientation|keyboardHidden|keyboard"
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity
+            android:theme="@style/Theme.AppCompat.Dialog"
+            android:name="com.vk.auth.modal.base.ModalAuthHostActivity"
+            android:configChanges="screenSize|orientation|keyboardHidden|keyboard"
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <meta-data
+            android:name="com.vk.oauth.tinkoff.VERIFICATION_CLIENT_ID"
+            android:value="tid_rustore-mb"/>
+        <meta-data
+            android:name="com.vk.oauth.tinkoff.VERIFICATION_DEEPLINK_SCHEME"
+            android:value="vkid"/>
+        <activity
+            android:theme="@style/VkSuperappkit.Light.Transparent"
+            android:name="com.vk.oauth.tinkoff.verification.VkTinkoffVerificationActivity"
+            android:exported="true"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data
+                    android:scheme="vkid"
+                    android:host="@string/vk_tinkoff_deeplink_host"/>
+            </intent-filter>
+        </activity>
+        <service
+            android:name="com.vk.silentauth.host.SilentAuthService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.vk.silentauth.action.GET_INFO"/>
+            </intent-filter>
+        </service>
+        <meta-data
+            android:name="com.vk.oauth.alfa.VERIFICATION_CLIENT_ID"
+            android:value="99a0f4a5-3141-4bf9-80bc-97d2f7387f2a"/>
+        <meta-data
+            android:name="com.vk.oauth.alfa.VERIFICATION_DEEPLINK_SCHEME"
+            android:value="vkid"/>
+        <activity
+            android:theme="@style/VkSuperappkit.Light.Transparent"
+            android:name="com.vk.oauth.alfa.verification.VkAlfaVerificationActivity"
+            android:exported="true"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data
+                    android:scheme="vkid"
+                    android:host="@string/vk_alfa_deeplink_host"/>
+            </intent-filter>
+        </activity>
+        <meta-data
+            android:name="com.vk.oauth.esia.OAUTH_CLIENT_ID"
+            android:value="VKC"/>
+        <activity
+            android:theme="@style/VkSuperappkit.Light.Transparent"
+            android:name="com.vk.oauth.esia.VkEsiaOAuthActivity"
+            android:exported="true"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data
+                    android:scheme="com.vkontakte.android"
+                    android:host="@string/vk_esia_redirect_host"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/Theme.PlayCore.Transparent"
+            android:name="com.vk.inappreview.impl.internal.PlayCoreDialogWrapperActivityProxy"/>
+        <provider
+            android:name="com.vk.metrics.performance.appstart.AppMeasuringContentProvider"
+            android:exported="false"
+            android:authorities="com.vkontakte.android.metric.performance.AppMeasuringContentProvider"
+            android:initOrder="0x80000000"/>
+        <provider
+            android:name="com.vk.core.deviceid.contentprovider.DeviceIdContentProvider"
+            android:permission="com.vkontakte.android.permission.ACCESS_DATA"
+            android:exported="true"
+            android:authorities="com.vkontakte.android.DeviceIdContentProvider"/>
+        <provider
+            android:name="com.vk.core.firebase.providers.FirebaseInitProviderWrapper"
+            android:exported="false"
+            android:authorities="com.vkontakte.android.firebaseinitproviderwrapper"
+            android:initOrder="100"/>
+        <service
+            android:name="androidx.appcompat.app.AppLocalesMetadataHolderService"
+            android:enabled="false"
+            android:exported="false">
+            <meta-data
+                android:name="autoStoreLocales"
+                android:value="true"/>
+        </service>
+        <receiver android:name="receivers.TimeSyncRequestedReceiver"/>
+        <service android:name="com.vk.wearable.core.WearableServiceImpl"/>
+        <receiver
+            android:name="com.vk.push.clientsdk.arbiter.ArbiterBroadcastReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.vk.push.ACTION_MASTER_HOST_UPDATE"/>
+            </intent-filter>
+        </receiver>
+        <activity
+            android:theme="@style/WebViewAuthActivityTheme"
+            android:name="com.vk.api.sdk.ui.VKWebViewAuthActivity"/>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.vk.api.sdk.ui.VKCaptchaActivity"/>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.vk.api.sdk.ui.VKConfirmationActivity"/>
+        <meta-data
+            android:name="VKSdkVersion"
+            android:value="4.0.0"/>
+        <meta-data
+            android:name="VKSdkVersionCode"
+            android:value="33"/>
+        <activity
+            android:name="one.video.cast.activity.ExpandedControlsActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <receiver
+            android:name="one.video.cast.receiver.CastMediaIntentReceiver"
+            android:exported="false"/>
+        <service
+            android:name="ru.mail.platform.libverify.sms.SmsRetrieverService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:enabled="true"
+            android:exported="false"/>
+        <receiver
+            android:name="ru.mail.libverify.sms.IncomingSmsReceiver"
+            android:permission="android.permission.BROADCAST_SMS"
+            android:enabled="false"
+            android:exported="true">
+            <intent-filter android:priority="999">
+                <action android:name="android.provider.Telephony.SMS_RECEIVED"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="ru.mail.libverify.sms.IncomingCallReceiver"
+            android:permission="android.permission.READ_PHONE_STATE"
+            android:enabled="false"
+            android:exported="true">
+            <intent-filter android:priority="999">
+                <action android:name="android.intent.action.PHONE_STATE"/>
+            </intent-filter>
+        </receiver>
+        <service
+            android:name="ru.mail.libverify.sms.SmsHandlingService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="ru.mail.sms.SmsHandlingService"/>
+            </intent-filter>
+        </service>
+        <service
+            android:name="ru.mail.libverify.ipc.IpcMessageService"
+            android:permission="android.permission.INTERNET"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="ru.mail.libverify.ipc.IpcMessageService"/>
+            </intent-filter>
+        </service>
+        <service
+            android:name="ru.mail.libverify.ipc.IpcNotificationService"
+            android:permission="android.permission.INTERNET"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="ru.mail.libverify.ipc.IpcNotificationService"/>
+            </intent-filter>
+        </service>
+        <service
+            android:name="ru.mail.libverify.notifications.NotificationService"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="ru.mail.notifications.NotificationService"/>
+            </intent-filter>
+        </service>
+        <activity
+            android:theme="@style/libverify.Theme.Settings"
+            android:name="ru.mail.libverify.notifications.SettingsActivity"
+            android:exported="false"
+            android:taskAffinity="ru.mail.libverify.notifications.SettingsActivity"
+            android:clearTaskOnLaunch="true"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"
+            android:noHistory="true"/>
+        <activity
+            android:theme="@style/libverify.Theme.Custom.Popup"
+            android:name="ru.mail.libverify.notifications.SmsCodeNotificationActivity"
+            android:exported="false"
+            android:taskAffinity="ru.mail.libverify.notifications.SmsCodeNotificationActivity"
+            android:clearTaskOnLaunch="true"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"
+            android:configChanges="screenSize|orientation|keyboardHidden"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:noHistory="true"/>
+        <activity
+            android:theme="@style/libverify.Theme.Settings"
+            android:name="ru.mail.libverify.notifications.SmsDialogsActivity"
+            android:exported="false"
+            android:taskAffinity="ru.mail.libverify.notifications.SmsDialogsActivity"
+            android:clearTaskOnLaunch="true"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"/>
+        <activity
+            android:theme="@style/libverify.Theme.Settings"
+            android:name="ru.mail.libverify.notifications.SmsMessagesActivity"
+            android:exported="false"
+            android:taskAffinity="ru.mail.libverify.notifications.SmsDialogsActivity"
+            android:excludeFromRecents="true"
+            android:parentActivityName="ru.mail.libverify.notifications.SmsDialogsActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".notifications.SmsDialogsActivity"/>
+        </activity>
+        <receiver
+            android:name="ru.mail.libverify.utils.NetworkStateReceiver"
+            android:exported="false"/>
+        <receiver android:name="ru.mail.libverify.utils.network.NetworkStateReceiver"/>
+        <receiver
+            android:name="ru.mail.libverify.utils.ScreenStateReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.SCREEN_OFF"/>
+                <action android:name="android.intent.action.SCREEN_ON"/>
+            </intent-filter>
+        </receiver>
+        <service
+            android:name="ru.mail.libverify.utils.network.NetworkCheckService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:enabled="true"
+            android:exported="false"/>
+        <receiver
+            android:label="PackageStateReceiver:2011001"
+            android:name="ru.mail.libverify.utils.PackageStateReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REPLACED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_MY_PACKAGE_REPLACED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="ru.mail.libverify.utils.PackageStateReceiver"/>
+            </intent-filter>
+        </receiver>
+        <service
+            android:label="VerificationCheckService"
+            android:name="ru.mail.libverify.fetcher.FetcherService"
+            android:enabled="true"
+            android:exported="false"/>
+        <service
+            android:label="VerificationCheckService"
+            android:name="ru.mail.libverify.fetcher.FetcherJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:enabled="true"
+            android:exported="false"/>
+        <receiver
+            android:name="ru.mail.libverify.utils.SystemRestartReceiver"
+            android:enabled="false"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="ru.mail.libverify.utils.AlarmReceiver"/>
+        <receiver
+            android:name="ru.mail.libverify.utils.BatteryLevelReceiver"
+            android:enabled="false"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BATTERY_LOW"/>
+                <action android:name="android.intent.action.BATTERY_OKAY"/>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
+            </intent-filter>
+        </receiver>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="ru.mail.libverify.utils.permissions.ShadowActivity"/>
+        <provider
+            android:name="ru.mail.libverify.utils.VerifyInitProvider"
+            android:exported="false"
+            android:authorities="com.vkontakte.android.verifyinitprovider"/>
+        <receiver
+            android:name="ru.mail.verify.core.utils.network.NetworkStateReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <service
+            android:name="ru.mail.verify.core.utils.VerificationService"
+            android:enabled="true"
+            android:exported="false"/>
+        <service
+            android:name="ru.mail.verify.core.utils.VerificationJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:enabled="true"
+            android:exported="false"/>
+        <service
+            android:name="ru.mail.verify.core.gcm.GcmProcessService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:enabled="true"
+            android:exported="false"/>
+        <service
+            android:name="ru.mail.verify.core.utils.IntentProcessService"
+            android:enabled="true"
+            android:exported="false"/>
+        <service
+            android:name="ru.mail.verify.core.utils.IntentProcessJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:enabled="true"
+            android:exported="false"/>
+        <receiver
+            android:name="com.google.android.gms.cast.framework.media.MediaIntentReceiver"
+            android:exported="false"/>
+        <service
+            android:name="com.google.android.gms.cast.framework.media.MediaNotificationService"
+            android:exported="false"
+            android:foregroundServiceType="mediaPlayback"/>
+        <service
+            android:name="com.google.android.gms.cast.framework.ReconnectionService"
+            android:exported="false"/>
+        <activity
+            android:theme="@style/EasyPermissions.Transparent"
+            android:label=""
+            android:name="pub.devrel.easypermissions.AppSettingsDialogHolderActivity"
+            android:exported="false"/>
+        <service
+            android:name="androidx.credentials.playservices.CredentialProviderMetadataHolder"
+            android:enabled="true"
+            android:exported="false">
+            <meta-data
+                android:name="androidx.credentials.CREDENTIAL_PROVIDER_KEY"
+                android:value="androidx.credentials.playservices.CredentialProviderPlayServicesImpl"/>
+        </service>
+        <activity
+            android:theme="@style/Theme.Hidden"
+            android:name="androidx.credentials.playservices.HiddenActivity"
+            android:enabled="true"
+            android:exported="false"
+            android:configChanges="screenSize|screenLayout|orientation|keyboardHidden"
+            android:fitsSystemWindows="true"/>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+            android:exported="false"
+            android:excludeFromRecents="true"/>
+        <service
+            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
+            android:exported="true"
+            android:visibleToInstantApps="true"/>
+        <meta-data
+            android:name="com.google.gms.fitness.sdk.version"
+            android:value="21.1.0"/>
+        <receiver
+            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+            android:enabled="true"
+            android:exported="false"/>
+        <service
+            android:name="com.google.android.gms.measurement.AppMeasurementService"
+            android:enabled="true"
+            android:exported="false"/>
+        <service
+            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:enabled="true"
+            android:exported="false"/>
+        <provider
+            android:name="com.my.target.common.MyTargetContentProvider"
+            android:enabled="true"
+            android:exported="false"
+            android:authorities="com.vkontakte.android.mytargetcontentprovider"/>
+        <service
+            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+            android:exported="false"
+            android:directBootAware="true">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.google.mlkit.common.internal.MlKitComponentDiscoveryService"
+            android:exported="false"
+            android:directBootAware="true">
+            <meta-data
+                android:name="com.google.firebase.components:com.google.mlkit.vision.barcode.internal.BarcodeRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data
+                android:name="com.google.firebase.components:com.google.mlkit.vision.common.internal.VisionCommonRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data
+                android:name="com.google.firebase.components:com.google.mlkit.common.internal.CommonComponentRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar"/>
+        </service>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false"/>
+        <activity
+            android:theme="@style/Theme.PlayCore.Transparent"
+            android:name="com.google.android.play.core.common.PlayCoreDialogWrapperActivity"
+            android:exported="false"
+            android:stateNotNeeded="true"/>
+        <service
+            android:name="com.google.firebase.sessions.SessionLifecycleService"
+            android:enabled="true"
+            android:exported="false"/>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="androidx.car.app.CarAppPermissionActivity"
+            android:exported="false"/>
+        <receiver android:name="androidx.car.app.notification.CarAppNotificationBroadcastReceiver"/>
+        <meta-data
+            android:name="ru.ok.tracer.startup.Initializer@c776f0d5-2110-4920-b53e-7b72536d8135"
+            android:value="ru.ok.tracer.heap.dumps.HeapDumpInitializer"/>
+        <meta-data
+            android:name="ru.ok.tracer.startup.Initializer@9d2c614d-0001-4434-ac26-86b4ec762c7f"
+            android:value="ru.ok.tracer.profiler.systrace.SystraceProfilerInitializer"/>
+        <meta-data
+            android:name="ru.ok.tracer.startup.Initializer@ca91e9e9-7a96-4187-9e35-2b2ef739f80f"
+            android:value="ru.ok.tracer.profiler.sampling.SamplingProfilerInitializer"/>
+        <service
+            android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"
+            android:enabled="@bool/enable_system_alarm_service_default"
+            android:exported="false"
+            android:directBootAware="false"/>
+        <service
+            android:name="androidx.work.impl.background.systemjob.SystemJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:enabled="@bool/enable_system_job_service_default"
+            android:exported="true"
+            android:directBootAware="false"/>
+        <service
+            android:name="androidx.work.impl.foreground.SystemForegroundService"
+            android:enabled="@bool/enable_system_foreground_service_default"
+            android:exported="false"
+            android:directBootAware="false"/>
+        <receiver
+            android:name="androidx.work.impl.utils.ForceStopRunnable.BroadcastReceiver"
+            android:enabled="true"
+            android:exported="false"
+            android:directBootAware="false"/>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy.BatteryChargingProxy"
+            android:enabled="false"
+            android:exported="false"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy.BatteryNotLowProxy"
+            android:enabled="false"
+            android:exported="false"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BATTERY_OKAY"/>
+                <action android:name="android.intent.action.BATTERY_LOW"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy.StorageNotLowProxy"
+            android:enabled="false"
+            android:exported="false"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.DEVICE_STORAGE_LOW"/>
+                <action android:name="android.intent.action.DEVICE_STORAGE_OK"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy.NetworkStateProxy"
+            android:enabled="false"
+            android:exported="false"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver"
+            android:enabled="false"
+            android:exported="false"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.TIME_SET"/>
+                <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver"
+            android:enabled="@bool/enable_system_alarm_service_default"
+            android:exported="false"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver"
+            android:permission="android.permission.DUMP"
+            android:enabled="true"
+            android:exported="true"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS"/>
+            </intent-filter>
+        </receiver>
+        <uses-native-library
+            android:name="libOpenCL.so"
+            android:required="false"/>
+        <uses-native-library
+            android:name="libOpenCL-car.so"
+            android:required="false"/>
+        <uses-native-library
+            android:name="libOpenCL-pixel.so"
+            android:required="false"/>
+        <service
+            android:name="androidx.health.platform.client.impl.sdkservice.HealthDataSdkService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="androidx.health.platform.client.ACTION_BIND_SDK_SERVICE"/>
+            </intent-filter>
+        </service>
+        <service
+            android:name="ru.ok.android.onelog.UploadService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="ru.ok.android.onelog.action.UPLOAD"/>
+            </intent-filter>
+        </service>
+        <service
+            android:name="androidx.room.MultiInstanceInvalidationService"
+            android:exported="false"
+            android:directBootAware="true"/>
+        <service
+            android:label="SendMetricsEventJobService"
+            android:name="ru.rustore.sdk.metrics.internal.presentation.SendMetricsEventJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:exported="false"/>
+        <activity
+            android:theme="@style/Theme.ActivityLauncher.Transparent"
+            android:name="ru.rustore.sdk.activitylauncher.RuStoreActivityLauncher"
+            android:exported="false"/>
+        <receiver
+            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+            android:permission="android.permission.DUMP"
+            android:enabled="true"
+            android:exported="true"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SKIP_FILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION"/>
+            </intent-filter>
+        </receiver>
+        <meta-data
+            android:name="ru.ok.tracer.startup.Initializer@b7b8ba75-c336-4dee-8e2a-64ef488e0218"
+            android:value="ru.ok.tracer.crash.report.CrashReportInitializer"/>
+        <meta-data
+            android:name="ru.ok.tracer.startup.Initializer@e7f220cd-0759-4d7f-a72c-6b53ecfc4dc4"
+            android:value="ru.ok.tracer.opentelemetry.OpenTelemetryInitializer"/>
+        <provider
+            android:name="ru.ok.tracer.startup.InitializationProvider"
+            android:exported="false"
+            android:authorities="com.vkontakte.android.tracer-startup"/>
+        <meta-data
+            android:name="ru.ok.tracer.startup.Initializer@25573e8a-bb0f-473f-938a-ca5b3541bda1"
+            android:value="ru.ok.tracer.utils.LoggerInitializer"/>
+        <meta-data
+            android:name="ru.ok.tracer.startup.Initializer@e416cfb4-5661-4523-b12c-0ff4ccabd436"
+            android:value="ru.ok.tracer.TracerInitializer"/>
+        <meta-data
+            android:name="com.google.android.play.billingclient.version"
+            android:value="6.0.1"/>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.android.billingclient.api.ProxyBillingActivity"
+            android:exported="false"
+            android:configChanges="screenSize|screenLayout|orientation|keyboardHidden|keyboard"/>
+        <service
+            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+            android:exported="false">
+            <meta-data
+                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+                android:value="cct"/>
+        </service>
+        <service
+            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:exported="false"/>
+        <receiver
+            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+            android:exported="false"/>
+        <provider
+            android:name="ru.ok.android.commons.app.ApplicationProvider"
+            android:exported="false"
+            android:authorities="com.vkontakte.android.ApplicationProvider"/>
+        <activity
+            android:theme="@style/healthkit_transparent"
+            android:name="com.huawei.hms.hihealth.activity.HealthKitMainActivity"
+            android:exported="false"/>
+        <meta-data
+            android:name="com.huawei.hms.client.service.name:health"
+            android:value="health:6.11.0.300"/>
+        <meta-data
+            android:name="com.huawei.hms.min_api_level:hihealth-base:hihealth"
+            android:value="18"/>
+        <meta-data
+            android:name="com.huawei.wearengine.sdk.api_level"
+            android:value="8"/>
+        <activity
+            android:theme="@android:style/Theme.Light.Panel"
+            android:name="com.huawei.wearengine.ClientHubActivity"
+            android:exported="false"
+            android:excludeFromRecents="true"
+            android:configChanges="fontScale|uiMode"/>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.huawei.hms.hwid.internal.ui.activity.HwIdSignInHubActivity"
+            android:exported="false"
+            android:excludeFromRecents="true"
+            android:configChanges="fontScale|uiMode"/>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.huawei.hms.account.internal.ui.activity.AccountSignInHubActivity"
+            android:exported="false"
+            android:excludeFromRecents="true"/>
+        <meta-data
+            android:name="com.huawei.hms.client.service.name:hwid"
+            android:value="hwid:6.4.0.301"/>
+        <meta-data
+            android:name="com.huawei.hms.min_api_level:hwid:hwid"
+            android:value="1"/>
+        <meta-data
+            android:name="com.huawei.hms.min_api_level:hwid:account"
+            android:value="13"/>
+        <meta-data
+            android:name="com.huawei.hms.client.service.name:base"
+            android:value="base:6.9.0.300"/>
+        <meta-data
+            android:name="com.huawei.hms.min_api_level:base:hmscore"
+            android:value="1"/>
+        <meta-data
+            android:name="availableLoaded"
+            android:value="yes"/>
+        <provider
+            android:name="com.huawei.agconnect.core.provider.AGConnectInitializeProvider"
+            android:exported="false"
+            android:authorities="com.vkontakte.android.AGCInitializeProvider"/>
+        <service
+            android:name="com.huawei.agconnect.core.ServiceDiscovery"
+            android:exported="false"/>
+        <activity
+            android:theme="@style/Base_Translucent"
+            android:name="com.huawei.hms.activity.BridgeActivity"
+            android:exported="false"
+            android:excludeFromRecents="true"
+            android:screenOrientation="behind"
+            android:configChanges="fontScale|layoutDirection|smallestScreenSize|screenSize|uiMode|screenLayout|orientation|locale"
+            android:hardwareAccelerated="true">
+            <meta-data
+                android:name="hwc-theme"
+                android:value="androidhwext:style/Theme.Emui.Translucent"/>
+        </activity>
+        <activity
+            android:name="com.huawei.hms.activity.EnableServiceActivity"
+            android:exported="false"
+            android:configChanges="smallestScreenSize|screenSize|screenLayout|orientation|keyboardHidden"/>
+        <meta-data
+            android:name="com.android.dynamic.apk.fused.modules"
+            android:value="base"/>
+        <meta-data
+            android:name="com.android.vending.splits"
+            android:resource="@xml/splits0"/>
+    </application>
+</manifest>

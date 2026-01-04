@@ -1,0 +1,217 @@
+----------------------------------------------------------------------------------------------------------------------------------------------
+ Module info :
+----------------------------------------------------------------------------------------------------------------------------------------------
+ Base       | Top        | Size       | Rebase | SafeSEH | ASLR  | CFG   | NXCompat | OS Dll | Version, Modulename & Path, DLLCharacteristics
+----------------------------------------------------------------------------------------------------------------------------------------------
+ 0x76470000 | 0x766af000 | 0x0023f000 | True   | True    | True  | True  |  False   | True   | 10.0.19041.4842 [KERNELBASE.dll] (C:\Windows\System32\KERNELBASE.dll) 0x4140
+ 0x00cf0000 | 0x00d03000 | 0x00013000 | True   | False   | True  | False |  False   | False  | -1.0- [vuln15.exe] (C:\Users\uuu\Desktop\vuln15.exe) 0x40
+ 0x751a0000 | 0x75290000 | 0x000f0000 | True   | True    | True  | True  |  False   | True   | 10.0.19041.4842 [KERNEL32.DLL] (C:\Windows\System32\KERNEL32.DLL) 0x4140
+ 0x76b10000 | 0x76bcf000 | 0x000bf000 | True   | True    | True  | True  |  False   | True   | 7.0.19041.3636 [msvcrt.dll] (C:\Windows\System32\msvcrt.dll) 0x4140
+ 0x770b0000 | 0x77254000 | 0x001a4000 | True   | True    | True  | True  |  False   | True   | 10.0.19041.4842 [ntdll.dll] (C:\Windows\SYSTEM32\ntdll.dll) 0x4140
+ 0x62500000 | 0x6250b000 | 0x0000b000 | False  | False   | False | False |  False   | False  | -1.0- [func.dll] (C:\Users\uuu\Desktop\func.dll) 0x0
+-----------------------------------------------------------------------------------------------------------------------------------------
+Interesting gadgets
+-------------------
+0x625013ac :  # NOP # NOP # MOV EAX,1 # RETN 0x0C    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625015ad :  # CLC # POP EBX # POP ESI # POP EBP # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625013ae :  # NOP # MOV EAX,1 # RETN 0x0C    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625015af :  # POP ESI # POP EBP # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x6250141e :  # ADD ESP,18 # POP EBX # RETN    ** [func.dll] **   |  asciiprint,ascii {PAGE_EXECUTE_READ}
+0x62501421 :  # POP EBX # RETN    ** [func.dll] **   |  asciiprint,ascii {PAGE_EXECUTE_READ}
+0x6250182c :  # POP EBX # POP ESI # POP EDI # POP EBP # RETN    ** [func.dll] **   |  asciiprint,ascii {PAGE_EXECUTE_READ}
+0x6250182d :  # POP ESI # POP EDI # POP EBP # RETN    ** [func.dll] **   |  asciiprint,ascii {PAGE_EXECUTE_READ}
+0x6250182e :  # POP EDI # POP EBP # RETN    ** [func.dll] **   |  asciiprint,ascii {PAGE_EXECUTE_READ}
+0x6250182f :  # POP EBP # RETN    ** [func.dll] **   |  asciiprint,ascii {PAGE_EXECUTE_READ}
+0x62501632 :  # ADD AL,8D # CLC # POP EBX # POP ESI # POP EBP # RETN    ** [func.dll] **   |  asciiprint,ascii {PAGE_EXECUTE_READ}
+0x62501634 :  # CLC # POP EBX # POP ESI # POP EBP # RETN    ** [func.dll] **   |  asciiprint,ascii {PAGE_EXECUTE_READ}
+0x62501635 :  # CLC # POP EBX # POP ESI # POP EBP # RETN    ** [func.dll] **   |  asciiprint,ascii {PAGE_EXECUTE_READ}
+0x62501636 :  # POP EBX # POP ESI # POP EBP # RETN    ** [func.dll] **   |  asciiprint,ascii {PAGE_EXECUTE_READ}
+0x62501637 :  # POP ESI # POP EBP # RETN    ** [func.dll] **   |  asciiprint,ascii {PAGE_EXECUTE_READ}
+0x62501638 :  # POP EBP # RETN    ** [func.dll] **   |  asciiprint,ascii {PAGE_EXECUTE_READ}
+0x62501053 :  # ADD ESP,18 # POP EBX # RETN    ** [func.dll] **   |  ascii {PAGE_EXECUTE_READ}
+0x62501056 :  # POP EBX # RETN    ** [func.dll] **   |  ascii {PAGE_EXECUTE_READ}
+0x625018a7 :  # POP ESI # POP EDI # POP EBP # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x62501470 :  # MOV EAX,1 # ADD ESP,1C # RETN 0x0C    ** [func.dll] **   |  asciiprint,ascii {PAGE_EXECUTE_READ}
+0x62501475 :  # ADD ESP,1C # RETN 0x0C    ** [func.dll] **   |  asciiprint,ascii {PAGE_EXECUTE_READ}
+0x625018a8 :  # POP EDI # POP EBP # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x62501291 :  # ADD CL,CL # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x62501498 :  # MOV EAX,1 # ADD ESP,1C # RETN 0x0C    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x6250129b :  # POP EAX # POP EAX # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x6250129c :  # POP EAX # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x6250149d :  # ADD ESP,1C # RETN 0x0C    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x6250129e :  # POP EBP # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625010a6 :  # POP EBX # POP ESI # POP EDI # POP EBP # RETN 0x0C    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625010a7 :  # POP ESI # POP EDI # POP EBP # RETN 0x0C    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625010a8 :  # POP EDI # POP EBP # RETN 0x0C    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625010a9 :  # POP EBP # RETN 0x0C    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625012aa :  # POP EBP # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625012b3 :  # POP EBP # POP EBP # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625012b4 :  # POP EBP # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625012b6 :  # POP EBP # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625012bf :  # POP EBX # POP EBX # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625012c0 :  # POP EBX # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625012c2 :  # POP EBP # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625012cb :  # POP ECX # POP EDX # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625012cc :  # POP EDX # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625012ce :  # POP EBP # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625014d5 :  # INC EDX # ADD ESP,14 # MOV EAX,1 # POP EBX # POP ESI # RETN 0x0C    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625014d6 :  # ADD ESP,14 # MOV EAX,1 # POP EBX # POP ESI # RETN 0x0C    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625012d7 :  # POP ECX # POP EAX # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625012d8 :  # POP EAX # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625014d9 :  # MOV EAX,1 # POP EBX # POP ESI # RETN 0x0C    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625012da :  # POP EBP # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625014de :  # POP EBX # POP ESI # RETN 0x0C    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625014df :  # POP ESI # RETN 0x0C    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625012e3 :  # POP EAX # POP EDX # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625012e4 :  # POP EDX # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625012e6 :  # POP EBP # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625012f3 :  # POP ECX # POP ECX # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625012f4 :  # POP ECX # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625012f6 :  # POP EBP # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x6250150b :  # ADD ESP,14 # MOV EAX,1 # POP EBX # POP ESI # RETN 0x0C    ** [func.dll] **   |  ascii {PAGE_EXECUTE_READ}
+0x6250150e :  # MOV EAX,1 # POP EBX # POP ESI # RETN 0x0C    ** [func.dll] **   |  ascii {PAGE_EXECUTE_READ}
+0x625018d8 :  # POP ES # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x62501712 :  # ADD CL,CL # RETN    ** [func.dll] **   |  ascii {PAGE_EXECUTE_READ}
+0x62501513 :  # POP EBX # POP ESI # RETN 0x0C    ** [func.dll] **   |  ascii {PAGE_EXECUTE_READ}
+0x62501514 :  # POP ESI # RETN 0x0C    ** [func.dll] **   |  asciiprint,ascii {PAGE_EXECUTE_READ}
+0x62501315 :  # ADD CL,CL # RETN    ** [func.dll] **   |  ascii {PAGE_EXECUTE_READ}
+0x6250111a :  # XOR EAX,EAX # POP EBX # POP ESI # POP EDI # POP EBP # RETN 0x0C    ** [func.dll] **   |  ascii {PAGE_EXECUTE_READ}
+0x6250111c :  # POP EBX # POP ESI # POP EDI # POP EBP # RETN 0x0C    ** [func.dll] **   |  ascii {PAGE_EXECUTE_READ}
+0x6250111d :  # POP ESI # POP EDI # POP EBP # RETN 0x0C    ** [func.dll] **   |  ascii {PAGE_EXECUTE_READ}
+0x6250111e :  # POP EDI # POP EBP # RETN 0x0C    ** [func.dll] **   |  ascii {PAGE_EXECUTE_READ}
+0x6250111f :  # POP EBP # RETN 0x0C    ** [func.dll] **   |  ascii {PAGE_EXECUTE_READ}
+0x6250132f :  # ADD CL,CL # RETN    ** [func.dll] **   |  ascii {PAGE_EXECUTE_READ}
+0x62501536 :  # LEA ESI,DWORD PTR DS:[ESI] # LEA EDI,DWORD PTR DS:[EDI] # XOR EAX,EAX # RETN    ** [func.dll] **   |  asciiprint,ascii {PAGE_EXECUTE_READ}
+0x62501539 :  # LEA EDI,DWORD PTR DS:[EDI] # XOR EAX,EAX # RETN    ** [func.dll] **   |  asciiprint,ascii {PAGE_EXECUTE_READ}
+0x62501540 :  # XOR EAX,EAX # RETN    ** [func.dll] **   |  asciiprint,ascii {PAGE_EXECUTE_READ}
+0x625015b0 :  # POP EBP # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x6250175a :  # ADD CL,CL # RETN    ** [func.dll] **   |  asciiprint,ascii {PAGE_EXECUTE_READ}
+0x62501362 :  # ADD CL,CL # RETN    ** [func.dll] **   |  ascii {PAGE_EXECUTE_READ}
+0x6250116a :  # NEG EAX # RETN    ** [func.dll] **   |  ascii {PAGE_EXECUTE_READ}
+0x6250137f :  # XOR EAX,C9000007 # RETN    ** [func.dll] **   |  ascii {PAGE_EXECUTE_READ}
+0x62501382 :  # ADD CL,CL # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x62501b83 :  # MOV ECX,C9FFFFF5 # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x62501b86 :  # DEC ECX # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x6250118f :  # ADD ESP,1C # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x6250139f :  # ADC EAX,C9000007 # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625013a2 :  # ADD CL,CL # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625015a5 :  # ADD EAX,EC830000 # ADD AL,8D # CLC # POP EBX # POP ESI # POP EBP # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625013a6 :  # NOP # NOP # NOP # NOP # NOP # NOP # MOV EAX,1 # RETN 0x0C    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625013a7 :  # NOP # NOP # NOP # NOP # NOP # MOV EAX,1 # RETN 0x0C    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625013a8 :  # NOP # NOP # NOP # NOP # MOV EAX,1 # RETN 0x0C    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625013a9 :  # NOP # NOP # NOP # NOP # MOV EAX,1 # RETN 0x0C    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625013aa :  # NOP # NOP # NOP # MOV EAX,1 # RETN 0x0C    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625013ab :  # NOP # NOP # NOP # MOV EAX,1 # RETN 0x0C    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625015ac :  # CLC # POP EBX # POP ESI # POP EBP # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625013ad :  # NOP # NOP # MOV EAX,1 # RETN 0x0C    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625015ae :  # POP EBX # POP ESI # POP EBP # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625013af :  # NOP # MOV EAX,1 # RETN 0x0C    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625013b0 :  # MOV EAX,1 # RETN 0x0C    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625015d4 :  # CLC # MOV EAX,ESI # POP EBX # POP ESI # POP EBP # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625015d5 :  # CLC # MOV EAX,ESI # POP EBX # POP ESI # POP EBP # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625015d6 :  # MOV EAX,ESI # POP EBX # POP ESI # POP EBP # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625015d8 :  # POP EBX # POP ESI # POP EBP # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625015d9 :  # POP ESI # POP EBP # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625015da :  # POP EBP # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625019df :  # ADD ESP,20 # POP EBX # POP ESI # POP EDI # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625019e2 :  # POP EBX # POP ESI # POP EDI # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625019e3 :  # POP ESI # POP EDI # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625019e4 :  # POP EDI # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625018a6 :  # POP EBX # POP ESI # POP EDI # POP EBP # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625012a7 :  # POP EBX # POP EBX # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625012a8 :  # POP EBX # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625018a9 :  # POP EBP # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625015aa :  # ADD AL,8D # CLC # POP EBX # POP ESI # POP EBP # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+
+Other gadgets
+-------------
+0x6250141f :  # LES EBX,FWORD PTR DS:[EAX] # POP EBX # RETN    ** [func.dll] **   |  asciiprint,ascii {PAGE_EXECUTE_READ}
+0x6250115b :  # MOV CL,9 # ADD BYTE PTR DS:[EAX],AL # TEST EAX,EAX # SETE AL # ADD ESP,1C # MOVZX EAX,AL # NEG EAX # RETN    ** [func.dll] **   |  ascii {PAGE_EXECUTE_READ}
+0x62501826 :  # ADD AL,BYTE PTR DS:[EAX] # ADD BYTE PTR SS:[EBP+5E5BF465],CL # POP EDI # POP EBP # RETN    ** [func.dll] **   |  asciiprint,ascii {PAGE_EXECUTE_READ}
+0x62501827 :  # ADD BYTE PTR DS:[EAX],AL # LEA ESP,DWORD PTR SS:[EBP-C] # POP EBX # POP ESI # POP EDI # POP EBP # RETN    ** [func.dll] **   |  asciiprint,ascii {PAGE_EXECUTE_READ}
+0x62501828 :  # ADD BYTE PTR SS:[EBP+5E5BF465],CL # POP EDI # POP EBP # RETN    ** [func.dll] **   |  asciiprint,ascii {PAGE_EXECUTE_READ}
+0x62501829 :  # LEA ESP,DWORD PTR SS:[EBP-C] # POP EBX # POP ESI # POP EDI # POP EBP # RETN    ** [func.dll] **   |  asciiprint,ascii {PAGE_EXECUTE_READ}
+0x6250162a :  # ADD AL,BYTE PTR DS:[F0890000] # SUB ESP,4 # LEA ESP,DWORD PTR SS:[EBP-8] # POP EBX # POP ESI # POP EBP # RETN    ** [func.dll] **   |  asciiprint,ascii {PAGE_EXECUTE_READ}
+0x6250162b :  # ADD EAX,F0890000 # SUB ESP,4 # LEA ESP,DWORD PTR SS:[EBP-8] # POP EBX # POP ESI # POP EBP # RETN    ** [func.dll] **   |  asciiprint,ascii {PAGE_EXECUTE_READ}
+0x6250162c :  # ADD BYTE PTR DS:[EAX],AL # MOV EAX,ESI # SUB ESP,4 # LEA ESP,DWORD PTR SS:[EBP-8] # POP EBX # POP ESI # POP EBP # RETN    ** [func.dll] **   |  asciiprint,ascii {PAGE_EXECUTE_READ}
+0x6250162d :  # ADD BYTE PTR DS:[ECX+4EC83F0],CL # LEA ESP,DWORD PTR SS:[EBP-8] # POP EBX # POP ESI # POP EBP # RETN    ** [func.dll] **   |  asciiprint,ascii {PAGE_EXECUTE_READ}
+0x6250162e :  # MOV EAX,ESI # SUB ESP,4 # LEA ESP,DWORD PTR SS:[EBP-8] # POP EBX # POP ESI # POP EBP # RETN    ** [func.dll] **   |  asciiprint,ascii {PAGE_EXECUTE_READ}
+0x62501630 :  # SUB ESP,4 # LEA ESP,DWORD PTR SS:[EBP-8] # POP EBX # POP ESI # POP EBP # RETN    ** [func.dll] **   |  asciiprint,ascii {PAGE_EXECUTE_READ}
+0x62501633 :  # LEA ESP,DWORD PTR SS:[EBP-8] # POP EBX # POP ESI # POP EBP # RETN    ** [func.dll] **   |  asciiprint,ascii {PAGE_EXECUTE_READ}
+0x62501051 :  # ADD BYTE PTR DS:[EAX],AL # ADD ESP,18 # POP EBX # RETN    ** [func.dll] **   |  ascii {PAGE_EXECUTE_READ}
+0x62501054 :  # LES EBX,FWORD PTR DS:[EAX] # POP EBX # RETN    ** [func.dll] **   |  ascii {PAGE_EXECUTE_READ}
+0x62501710 :  # ADD BYTE PTR DS:[EAX],AL # ADD CL,CL # RETN    ** [func.dll] **   |  ascii {PAGE_EXECUTE_READ}
+0x6250146a :  # ADC EAX,7403F883 # ADC BYTE PTR DS:[EAX+1],BH # ADD ESP,1C # RETN 0x0C    ** [func.dll] **   |  asciiprint,ascii {PAGE_EXECUTE_READ}
+0x6250146c :  # CLC # ADD ESI,DWORD PTR DS:[EAX+EDX-48] # ADD DWORD PTR DS:[EAX],EAX # ADD BYTE PTR DS:[EAX],AL # ADD ESP,1C # RETN 0x0C    ** [func.dll] **   |  asciiprint,ascii {PAGE_EXECUTE_READ}
+0x62501512 :  # ADD BYTE PTR DS:[EBX+5E],BL # RETN 0x0C    ** [func.dll] **   |  ascii {PAGE_EXECUTE_READ}
+0x6250146f :  # ADC BYTE PTR DS:[EAX+1],BH # ADD ESP,1C # RETN 0x0C    ** [func.dll] **   |  asciiprint,ascii {PAGE_EXECUTE_READ}
+0x62501471 :  # ADD DWORD PTR DS:[EAX],EAX # ADD BYTE PTR DS:[EAX],AL # ADD ESP,1C # RETN 0x0C    ** [func.dll] **   |  asciiprint,ascii {PAGE_EXECUTE_READ}
+0x62501473 :  # ADD BYTE PTR DS:[EAX],AL # ADD ESP,1C # RETN 0x0C    ** [func.dll] **   |  asciiprint,ascii {PAGE_EXECUTE_READ}
+0x62501310 :  # AND AL,0E8 # MOV BYTE PTR DS:[C9000007],AL # RETN    ** [func.dll] **   |  ascii {PAGE_EXECUTE_READ}
+0x6250128e :  # OR BYTE PTR CS:[EAX],AL # ADD CL,CL # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x6250148f :  # OR BYTE PTR DS:[ECX+58E82404],CL # ADD AL,BYTE PTR DS:[EAX] # ADD BYTE PTR DS:[EAX+1],BH # ADD ESP,1C # RETN 0x0C    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x62501492 :  # AND AL,0E8 # POP EAX # ADD AL,BYTE PTR DS:[EAX] # ADD BYTE PTR DS:[EAX+1],BH # ADD ESP,1C # RETN 0x0C    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x62501494 :  # POP EAX # ADD AL,BYTE PTR DS:[EAX] # ADD BYTE PTR DS:[EAX+1],BH # ADD ESP,1C # RETN 0x0C    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x62501495 :  # ADD AL,BYTE PTR DS:[EAX] # ADD BYTE PTR DS:[EAX+1],BH # ADD ESP,1C # RETN 0x0C    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x62501496 :  # ADD BYTE PTR DS:[EAX],AL # MOV EAX,1 # ADD ESP,1C # RETN 0x0C    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x62501497 :  # ADD BYTE PTR DS:[EAX+1],BH # ADD ESP,1C # RETN 0x0C    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x62501499 :  # ADD DWORD PTR DS:[EAX],EAX # ADD BYTE PTR DS:[EAX],AL # ADD ESP,1C # RETN 0x0C    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x6250149b :  # ADD BYTE PTR DS:[EAX],AL # ADD ESP,1C # RETN 0x0C    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x6250189e :  # ADD BYTE PTR DS:[EAX],AL # SUB ESP,10 # LEA ESP,DWORD PTR SS:[EBP-C] # POP EBX # POP ESI # POP EDI # POP EBP # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625010a0 :  # DEC DWORD PTR DS:[ECX+F4658DF0] # POP EBX # POP ESI # POP EDI # POP EBP # RETN 0x0C    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625010a1 :  # MOV EAX,ESI # LEA ESP,DWORD PTR SS:[EBP-C] # POP EBX # POP ESI # POP EDI # POP EBP # RETN 0x0C    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625018a2 :  # ADC BYTE PTR SS:[EBP+5E5BF465],CL # POP EDI # POP EBP # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625010a3 :  # LEA ESP,DWORD PTR SS:[EBP-C] # POP EBX # POP ESI # POP EDI # POP EBP # RETN 0x0C    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625014d0 :  # ADC AL,BYTE PTR DS:[EBX+427401F8] # ADD ESP,14 # MOV EAX,1 # POP EBX # POP ESI # RETN 0x0C    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625014d2 :  # CLC # ADD DWORD PTR DS:[EDX+EAX*2-7D],ESI # LES EDX,FWORD PTR DS:[EAX+EDI*4] # ADD DWORD PTR DS:[EAX],EAX # ADD BYTE PTR DS:[EAX],AL # POP EBX # POP ESI # RETN 0x0C    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625014d3 :  # ADD DWORD PTR DS:[EDX+EAX*2-7D],ESI # LES EDX,FWORD PTR DS:[EAX+EDI*4] # ADD DWORD PTR DS:[EAX],EAX # ADD BYTE PTR DS:[EAX],AL # POP EBX # POP ESI # RETN 0x0C    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625014d7 :  # LES EDX,FWORD PTR DS:[EAX+EDI*4] # ADD DWORD PTR DS:[EAX],EAX # ADD BYTE PTR DS:[EAX],AL # POP EBX # POP ESI # RETN 0x0C    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625014d8 :  # ADC AL,0B8 # ADD DWORD PTR DS:[EAX],EAX # ADD BYTE PTR DS:[EAX],AL # POP EBX # POP ESI # RETN 0x0C    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625014da :  # ADD DWORD PTR DS:[EAX],EAX # ADD BYTE PTR DS:[EAX],AL # POP EBX # POP ESI # RETN 0x0C    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625014db :  # ADD BYTE PTR DS:[EAX],AL # ADD BYTE PTR DS:[EBX+5E],BL # RETN 0x0C    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625014dc :  # ADD BYTE PTR DS:[EAX],AL # POP EBX # POP ESI # RETN 0x0C    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625014dd :  # ADD BYTE PTR DS:[EBX+5E],BL # RETN 0x0C    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625012f0 :  # AND AL,0F4 # POP ECX # POP ECX # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625012f1 :  # AND AL,0F4 # POP ECX # POP ECX # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x6250150c :  # LES EDX,FWORD PTR DS:[EAX+EDI*4] # ADD DWORD PTR DS:[EAX],EAX # ADD BYTE PTR DS:[EAX],AL # POP EBX # POP ESI # RETN 0x0C    ** [func.dll] **   |  ascii {PAGE_EXECUTE_READ}
+0x6250150d :  # ADC AL,0B8 # ADD DWORD PTR DS:[EAX],EAX # ADD BYTE PTR DS:[EAX],AL # POP EBX # POP ESI # RETN 0x0C    ** [func.dll] **   |  ascii {PAGE_EXECUTE_READ}
+0x6250150f :  # ADD DWORD PTR DS:[EAX],EAX # ADD BYTE PTR DS:[EAX],AL # POP EBX # POP ESI # RETN 0x0C    ** [func.dll] **   |  ascii {PAGE_EXECUTE_READ}
+0x62501510 :  # ADD BYTE PTR DS:[EAX],AL # ADD BYTE PTR DS:[EBX+5E],BL # RETN 0x0C    ** [func.dll] **   |  ascii {PAGE_EXECUTE_READ}
+0x62501511 :  # ADD BYTE PTR DS:[EAX],AL # POP EBX # POP ESI # RETN 0x0C    ** [func.dll] **   |  ascii {PAGE_EXECUTE_READ}
+0x62501312 :  # MOV BYTE PTR DS:[C9000007],AL # RETN    ** [func.dll] **   |  ascii {PAGE_EXECUTE_READ}
+0x62501116 :  # DEC DWORD PTR SS:[EBP+C031F465] # POP EBX # POP ESI # POP EDI # POP EBP # RETN 0x0C    ** [func.dll] **   |  ascii {PAGE_EXECUTE_READ}
+0x62501117 :  # LEA ESP,DWORD PTR SS:[EBP-C] # XOR EAX,EAX # POP EBX # POP ESI # POP EDI # POP EBP # RETN 0x0C    ** [func.dll] **   |  ascii {PAGE_EXECUTE_READ}
+0x62501538 :  # ADD BYTE PTR SS:[EBP+27BC],CL # ADD BYTE PTR DS:[EAX],AL # XOR EAX,EAX # RETN    ** [func.dll] **   |  asciiprint,ascii {PAGE_EXECUTE_READ}
+0x6250153b :  # DAA # ADD BYTE PTR DS:[EAX],AL # ADD BYTE PTR DS:[EAX],AL # XOR EAX,EAX # RETN    ** [func.dll] **   |  asciiprint,ascii {PAGE_EXECUTE_READ}
+0x6250153c :  # ADD BYTE PTR DS:[EAX],AL # ADD BYTE PTR DS:[EAX],AL # XOR EAX,EAX # RETN    ** [func.dll] **   |  asciiprint,ascii {PAGE_EXECUTE_READ}
+0x6250153e :  # ADD BYTE PTR DS:[EAX],AL # XOR EAX,EAX # RETN    ** [func.dll] **   |  asciiprint,ascii {PAGE_EXECUTE_READ}
+0x62501758 :  # ADD BYTE PTR DS:[EAX],AL # ADD CL,CL # RETN    ** [func.dll] **   |  asciiprint,ascii {PAGE_EXECUTE_READ}
+0x62501159 :  # AND AL,0E8 # MOV CL,9 # ADD BYTE PTR DS:[EAX],AL # TEST EAX,EAX # SETE AL # ADD ESP,1C # MOVZX EAX,AL # NEG EAX # RETN    ** [func.dll] **   |  ascii {PAGE_EXECUTE_READ}
+0x6250128f :  # OR BYTE PTR DS:[EAX],AL # ADD CL,CL # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x6250115c :  # OR DWORD PTR DS:[EAX],EAX # ADD BYTE PTR SS:[EBP+C0940FC0],AL # ADD ESP,1C # MOVZX EAX,AL # NEG EAX # RETN    ** [func.dll] **   |  ascii {PAGE_EXECUTE_READ}
+0x6250115d :  # ADD BYTE PTR DS:[EAX],AL # TEST EAX,EAX # SETE AL # ADD ESP,1C # MOVZX EAX,AL # NEG EAX # RETN    ** [func.dll] **   |  ascii {PAGE_EXECUTE_READ}
+0x6250115e :  # ADD BYTE PTR SS:[EBP+C0940FC0],AL # ADD ESP,1C # MOVZX EAX,AL # NEG EAX # RETN    ** [func.dll] **   |  ascii {PAGE_EXECUTE_READ}
+0x6250115f :  # TEST EAX,EAX # SETE AL # ADD ESP,1C # MOVZX EAX,AL # NEG EAX # RETN    ** [func.dll] **   |  ascii {PAGE_EXECUTE_READ}
+0x62501161 :  # SETE AL # ADD ESP,1C # MOVZX EAX,AL # NEG EAX # RETN    ** [func.dll] **   |  ascii {PAGE_EXECUTE_READ}
+0x62501164 :  # ADD ESP,1C # MOVZX EAX,AL # NEG EAX # RETN    ** [func.dll] **   |  ascii {PAGE_EXECUTE_READ}
+0x62501165 :  # LES EBX,FWORD PTR DS:[EDI+ECX] # MOV DH,0C0 # NEG EAX # RETN    ** [func.dll] **   |  ascii {PAGE_EXECUTE_READ}
+0x62501167 :  # MOVZX EAX,AL # NEG EAX # RETN    ** [func.dll] **   |  ascii {PAGE_EXECUTE_READ}
+0x62501168 :  # MOV DH,0C0 # NEG EAX # RETN    ** [func.dll] **   |  ascii {PAGE_EXECUTE_READ}
+0x6250146d :  # ADD ESI,DWORD PTR DS:[EAX+EDX-48] # ADD DWORD PTR DS:[EAX],EAX # ADD BYTE PTR DS:[EAX],AL # ADD ESP,1C # RETN 0x0C    ** [func.dll] **   |  asciiprint,ascii {PAGE_EXECUTE_READ}
+0x6250137d :  # AND AL,0E8 # XOR EAX,C9000007 # RETN    ** [func.dll] **   |  ascii {PAGE_EXECUTE_READ}
+0x6250118d :  # ADD BYTE PTR DS:[EAX],AL # ADD ESP,1C # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x6250139d :  # AND AL,0E8 # ADC EAX,C9000007 # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625015a4 :  # MOV BYTE PTR DS:[EC830000],AL # ADD AL,8D # CLC # POP EBX # POP ESI # POP EBP # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625015a6 :  # ADD BYTE PTR DS:[EAX],AL # SUB ESP,4 # LEA ESP,DWORD PTR SS:[EBP-8] # POP EBX # POP ESI # POP EBP # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625015a7 :  # ADD BYTE PTR DS:[EBX+658D04EC],AL # CLC # POP EBX # POP ESI # POP EBP # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625015a8 :  # SUB ESP,4 # LEA ESP,DWORD PTR SS:[EBP-8] # POP EBX # POP ESI # POP EBP # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625015ab :  # LEA ESP,DWORD PTR SS:[EBP-8] # POP EBX # POP ESI # POP EBP # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625013b1 :  # ADD DWORD PTR DS:[EAX],EAX # ADD BYTE PTR DS:[EAX],AL # RETN 0x0C    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625013b3 :  # ADD BYTE PTR DS:[EAX],AL # RETN 0x0C    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625018a0 :  # SUB ESP,10 # LEA ESP,DWORD PTR SS:[EBP-C] # POP EBX # POP ESI # POP EDI # POP EBP # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625015d3 :  # LEA ESP,DWORD PTR SS:[EBP-8] # MOV EAX,ESI # POP EBX # POP ESI # POP EBP # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625019e0 :  # LES ESP,FWORD PTR DS:[EAX] # POP EBX # POP ESI # POP EDI # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625019e1 :  # AND BYTE PTR DS:[EBX+5E],BL # POP EDI # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625018a3 :  # LEA ESP,DWORD PTR SS:[EBP-C] # POP EBX # POP ESI # POP EDI # POP EBP # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625013e8 :  # LES ECX,FWORD PTR DS:[EBX+ESI*8] # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625013e9 :  # OR AL,0F3 # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}

@@ -1,0 +1,4 @@
+bison -d gram.y
+flex lex.l
+cc lex.yy.c gram.tab.c poly.c -o polynomial_parser -lm
+./polynomial_parser input.in

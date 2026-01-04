@@ -1,0 +1,19 @@
+﻿  Building 'nullFilter' with toolset 'WindowsKernelModeDriver10.0' and the 'Universal' target platform.
+  Stamping x64\Release\nullFilter.inf
+  Stamping [Version] section with DriverVer=09/19/2025,5.8.2.45
+  nullFilter.vcxproj -> C:\Users\Vasilisa\source\nullFilter\x64\Release\nullFilter.sys
+  Driver is 'Universal'.
+  .........................
+  Signability test complete.
+  
+  Errors:
+  None
+  
+  Warnings:
+  None
+  
+  Catalog generation complete.
+  C:\Users\Vasilisa\source\nullFilter\x64\Release\nullFilter\nullfilter.cat
+  Done Adding Additional Store
+  Successfully signed: x64\Release\nullFilter\nullfilter.cat
+  

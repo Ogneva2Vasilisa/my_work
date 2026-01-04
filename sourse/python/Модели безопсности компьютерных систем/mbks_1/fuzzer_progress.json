@@ -1,0 +1,62 @@
+{
+    "interesting_cases": [
+        {
+            "modification": {
+                "1": 0
+            },
+            "blocks_count": 5204,
+            "timestamp": 1746729736.1662643
+        },
+        {
+            "modification": {
+                "2": 255
+            },
+            "blocks_count": 5207,
+            "timestamp": 1746729736.3192797
+        },
+        {
+            "modification": {
+                "3": 0
+            },
+            "blocks_count": 5163,
+            "timestamp": 1746729736.470257
+        },
+        {
+            "modification": {
+                "5": 0
+            },
+            "blocks_count": 5204,
+            "timestamp": 1746729738.3657227
+        }
+    ],
+    "iteration": 100,
+    "total_possible_addresses": 5308,
+    "coverage_history": [
+        {
+            "iteration": 2,
+            "covered_blocks": 5204,
+            "timestamp": 1746729736.1662643
+        },
+        {
+            "iteration": 3,
+            "covered_blocks": 5207,
+            "timestamp": 1746729736.3192797
+        },
+        {
+            "iteration": 4,
+            "covered_blocks": 5163,
+            "timestamp": 1746729736.470257
+        },
+        {
+            "iteration": 6,
+            "covered_blocks": 5204,
+            "timestamp": 1746729738.3657227
+        }
+    ],
+    "statistics": {
+        "total_iterations": 100,
+        "total_covered_blocks": 5204,
+        "total_interesting_cases": 4,
+        "last_update": "Thu May  8 21:44:42 2025"
+    }
+}

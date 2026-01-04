@@ -1,0 +1,2 @@
+C:\Users\eprig\Documents\ProjectsOfMBKS\lab4\nullFilter\x64\Release\nullFilter.sys
+C:\Users\Vasilisa\source\nullFilter\x64\Release\nullFilter.sys

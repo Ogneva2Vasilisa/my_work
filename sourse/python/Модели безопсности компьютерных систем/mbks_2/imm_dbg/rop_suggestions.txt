@@ -1,0 +1,55 @@
+----------------------------------------------------------------------------------------------------------------------------------------------
+ Module info :
+----------------------------------------------------------------------------------------------------------------------------------------------
+ Base       | Top        | Size       | Rebase | SafeSEH | ASLR  | CFG   | NXCompat | OS Dll | Version, Modulename & Path, DLLCharacteristics
+----------------------------------------------------------------------------------------------------------------------------------------------
+ 0x76470000 | 0x766af000 | 0x0023f000 | True   | True    | True  | True  |  False   | True   | 10.0.19041.4842 [KERNELBASE.dll] (C:\Windows\System32\KERNELBASE.dll) 0x4140
+ 0x00cf0000 | 0x00d03000 | 0x00013000 | True   | False   | True  | False |  False   | False  | -1.0- [vuln15.exe] (C:\Users\uuu\Desktop\vuln15.exe) 0x40
+ 0x751a0000 | 0x75290000 | 0x000f0000 | True   | True    | True  | True  |  False   | True   | 10.0.19041.4842 [KERNEL32.DLL] (C:\Windows\System32\KERNEL32.DLL) 0x4140
+ 0x76b10000 | 0x76bcf000 | 0x000bf000 | True   | True    | True  | True  |  False   | True   | 7.0.19041.3636 [msvcrt.dll] (C:\Windows\System32\msvcrt.dll) 0x4140
+ 0x770b0000 | 0x77254000 | 0x001a4000 | True   | True    | True  | True  |  False   | True   | 10.0.19041.4842 [ntdll.dll] (C:\Windows\SYSTEM32\ntdll.dll) 0x4140
+ 0x62500000 | 0x6250b000 | 0x0000b000 | False  | False   | False | False |  False   | False  | -1.0- [func.dll] (C:\Users\uuu\Desktop\func.dll) 0x0
+-----------------------------------------------------------------------------------------------------------------------------------------
+Suggestions
+-----------
+[pop ebp]
+0x625012c2 (RVA : 0x000012c2) : # POP EBP # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625012f6 (RVA : 0x000012f6) : # POP EBP # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625012e6 (RVA : 0x000012e6) : # POP EBP # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625010a9 (RVA : 0x000010a9) : # POP EBP # RETN 0x0C    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625012aa (RVA : 0x000012aa) : # POP EBP # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625012ce (RVA : 0x000012ce) : # POP EBP # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x6250182f (RVA : 0x0000182f) : # POP EBP # RETN    ** [func.dll] **   |  asciiprint,ascii {PAGE_EXECUTE_READ}
+0x625015b0 (RVA : 0x000015b0) : # POP EBP # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625012b4 (RVA : 0x000012b4) : # POP EBP # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625012b6 (RVA : 0x000012b6) : # POP EBP # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+[dec ecx]
+0x62501b86 (RVA : 0x00001b86) : # DEC ECX # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+[clear eax]
+0x62501540 (RVA : 0x00001540) : # XOR EAX,EAX # RETN    ** [func.dll] **   |  asciiprint,ascii {PAGE_EXECUTE_READ}
+[pop ecx]
+0x625012f4 (RVA : 0x000012f4) : # POP ECX # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+[pop esi]
+0x62501514 (RVA : 0x00001514) : # POP ESI # RETN 0x0C    ** [func.dll] **   |  asciiprint,ascii {PAGE_EXECUTE_READ}
+0x625014df (RVA : 0x000014df) : # POP ESI # RETN 0x0C    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+[pop ebx]
+0x625012c0 (RVA : 0x000012c0) : # POP EBX # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x62501421 (RVA : 0x00001421) : # POP EBX # RETN    ** [func.dll] **   |  asciiprint,ascii {PAGE_EXECUTE_READ}
+0x625012a8 (RVA : 0x000012a8) : # POP EBX # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x62501056 (RVA : 0x00001056) : # POP EBX # RETN    ** [func.dll] **   |  ascii {PAGE_EXECUTE_READ}
+[add value to eax]
+0x6250137f (RVA : 0x0000137f) : # XOR EAX,C9000007 # RETN    ** [func.dll] **   |  ascii {PAGE_EXECUTE_READ}
+0x6250139f (RVA : 0x0000139f) : # ADC EAX,C9000007 # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+[pop eax]
+0x625012d8 (RVA : 0x000012d8) : # POP EAX # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x6250129c (RVA : 0x0000129c) : # POP EAX # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+[pop edi]
+0x625019e4 (RVA : 0x000019e4) : # POP EDI # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+[move esi -> eax]
+0x625015d6 (RVA : 0x000015d6) : # MOV EAX,ESI # POP EBX # POP ESI # POP EBP # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+[pop edx]
+0x625012e4 (RVA : 0x000012e4) : # POP EDX # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+0x625012cc (RVA : 0x000012cc) : # POP EDX # RETN    ** [func.dll] **   |   {PAGE_EXECUTE_READ}
+[neg eax]
+0x6250116a (RVA : 0x0000116a) : # NEG EAX # RETN    ** [func.dll] **   |  ascii {PAGE_EXECUTE_READ}
+
