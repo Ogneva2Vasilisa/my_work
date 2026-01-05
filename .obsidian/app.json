@@ -1,6 +1,6 @@
 {
   "newFileLocation": "current",
-  "newLinkFormat": "relative",
+  "newLinkFormat": "absolute",
   "useMarkdownLinks": true,
   "showUnsupportedFiles": false,
   "attachmentFolderPath": "img",
