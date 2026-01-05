@@ -11,10 +11,14 @@
             "id": "f03d602eea1af27b",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Граф"
+              "type": "markdown",
+              "state": {
+                "file": "README.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "README"
             }
           },
           {
@@ -181,6 +185,7 @@
   },
   "active": "f03d602eea1af27b",
   "lastOpenFiles": [
+    "sourse/с, с++/Основы информационной безопасности/README.md",
     "README.md",
     "sourse/с, с++/Языки программироваиня/README.md",
     "sourse/с, с++/Операционные системы/README.md",
@@ -225,7 +230,6 @@
     "с, с++/chernikova_v_m_lab_2_make-master/trspo2/libs/libpng/contrib/testpngs/crashers/huge_zTXt_chunk.png",
     "с, с++/chernikova_v_m_lab_2_make-master/trspo2/libs/libpng/contrib/testpngs/crashers/huge_tIME_chunk.png",
     "с, с++/chernikova_v_m_lab_2_make-master/trspo2/libs/libpng/scripts/cmake/AUTHORS.md",
-    "python/chernikova_v_m_lab_4_text_editor/README.md",
-    "python/chernikova_v_m_lab_2_refactoring/README.md"
+    "python/chernikova_v_m_lab_4_text_editor/README.md"
   ]
 }
