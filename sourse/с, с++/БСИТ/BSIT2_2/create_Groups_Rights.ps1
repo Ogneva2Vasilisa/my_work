@@ -1,0 +1,8 @@
+﻿dsacls "DC=museum,DC=com" /I:T /G "museum\Account Managers:CCDC;user"
+dsacls "DC=museum,DC=com" /I:S /G "museum\Account Managers:CA;Reset Password;user"
+dsacls "DC=museum,DC=com" /I:S /G "museum\Account Managers:RPWP;userAccountControl;user"
+dsacls "DC=museum,DC=com" /I:S /G "museum\Account Managers:CA;;user"
+dsacls "DC=museum,DC=com" /I:S /G "museum\Account Managers:RPWP;pwdLastSet;user"
+dsacls "DC=museum,DC=com" /I:S /G "museum\Help Desk:RPWP;lockoutTime;user"
+dsmod group "CN=IIS_IUSRS,CN=Builtin,DC=museum,DC=com" -addmbr "CN=Resource Admins,OU=Administration,DC=museum,DC=com"
+dsmod group "CN=Администраторы,CN=Builtin,DC=museum,DC=com" -addmbr "CN=General Admins,OU=Administration,DC=museum,DC=com"

@@ -1,0 +1,148 @@
+1 name          - создать группу name
+2 name pass     - создать пользователя name с паролем pass
+3 name1 name2   - включить пользователя name1 в группу name2
+4 name1 name2   - исключить пользователя name1 из группы name2
+5 name          - удалить пользователя name
+6 name          - удалить группу name
+7 name priv     - добавить пользователю name привелегию priv
+8 name priv     - удалить у name привелегию priv
+9 name priv     - включить у name привелегию priv
+10 name priv    - выключить у name привелегию priv
+11              - вывести список пользователей
+12              - вывести список групп
+13              - эта справка
+
+
+
+1 ttt
+7 ttt SeBackupPrivilege
+7 ttt SeRestorePrivilege
+2 ms 123
+7 ms SeShutdownPrivilege
+7 ms SeChangeNotifyPrivilege
+11
+12
+3 ms ttt
+11
+
+8 ms SeShutdownPrivilege
+8 ms SeChangeNotifyPrivilege
+11
+5 ms
+6 ttt
+11
+12
+
+
+
+
+
+
+
+
+
+
+SeAssignPrimaryTokenPrivilege
+Замена токена уровня процесса.
+
+SeAuditPrivilege
+Генерация записей аудита безопасности.
+
+SeBackupPrivilege
+Возможность создания резервных копий файлов и каталогов.
+
+SeChangeNotifyPrivilege
+Получение уведомлений об изменениях в файловой системе (эта привилегия обычно включена для всех пользователей).
+
+SeCreateGlobalPrivilege
+Создание глобальных объектов (например, мьютексов, семафоров).
+
+SeCreatePagefilePrivilege
+Создание файла подкачки.
+
+SeCreatePermanentPrivilege
+Создание постоянных объектов (например, устройств).
+
+SeCreateSymbolicLinkPrivilege
+Создание символических ссылок.
+
+SeCreateTokenPrivilege
+Создание токенов доступа.
+
+SeDebugPrivilege
+Отладка процессов (включая доступ к памяти других процессов).
+
+SeEnableDelegationPrivilege
+Включение делегирования учетных записей.
+
+SeImpersonatePrivilege
+Олицетворение других пользователей.
+
+SeIncreaseBasePriorityPrivilege
+Повышение базового приоритета процесса.
+
+SeIncreaseQuotaPrivilege
+Увеличение квот памяти для процессов.
+
+SeIncreaseWorkingSetPrivilege
+Увеличение рабочего набора памяти для процессов.
+
+SeLoadDriverPrivilege
+Загрузка и выгрузка драйверов устройств.
+
+SeLockMemoryPrivilege
+Блокировка страниц памяти в оперативной памяти.
+
+SeMachineAccountPrivilege
+Добавление рабочих станций в домен.
+
+SeManageVolumePrivilege
+Управление томами (например, дефрагментация).
+
+SeProfileSingleProcessPrivilege
+Профилирование одного процесса.
+
+SeRelabelPrivilege
+Изменение метки целостности объекта.
+
+SeRemoteShutdownPrivilege
+Удаленное завершение работы системы.
+
+SeRestorePrivilege
+Восстановление файлов и каталогов из резервных копий.
+
+SeSecurityPrivilege
+Управление аудитом и журналом безопасности.
+
+SeShutdownPrivilege
+Завершение работы системы.
+
+SeSyncAgentPrivilege
+Синхронизация данных каталогов.
+
+SeSystemEnvironmentPrivilege
+Изменение параметров системного окружения (например, UEFI/BIOS).
+
+SeSystemProfilePrivilege
+Профилирование всей системы.
+
+SeSystemtimePrivilege
+Изменение системного времени.
+
+SeTakeOwnershipPrivilege
+Взятие владения объектами (файлами, каталогами и т.д.).
+
+SeTcbPrivilege
+Действие как часть операционной системы (Trusted Computing Base).
+
+SeTimeZonePrivilege
+Изменение часового пояса.
+
+SeTrustedCredManAccessPrivilege
+Доступ к диспетчеру учетных данных.
+
+SeUndockPrivilege
+Отсоединение компьютера от док-станции.
+
+SeUnsolicitedInputPrivilege
+Чтение непрошеного ввода с устройств ввода.

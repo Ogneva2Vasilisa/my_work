@@ -1,0 +1,4 @@
+C:\Users\vas\source\repos\2BSIT\x64\Release\MyDir
+C:\Users\vas\source\repos\2BSIT\x64\Release\MyDir.zip
+*.txt
+my????.txt
