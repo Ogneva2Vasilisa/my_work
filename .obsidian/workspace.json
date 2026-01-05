@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "sourse/с, с++/БСИТ/BSIT3/README.md",
+                "file": "sourse/Другой стек/Вирус, пакетный генератор, разведка/ПАСОИБ 4.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "ПАСОИБ 4"
             }
           }
         ]
@@ -172,6 +172,13 @@
   },
   "active": "f03d602eea1af27b",
   "lastOpenFiles": [
+    "sourse/Другой стек/Вирус, пакетный генератор, разведка/ПАСОИБ 3.md",
+    "sourse/Другой стек/Вирус, пакетный генератор, разведка/ПАСОИБ 4.md",
+    "sourse/Другой стек/Вирус, пакетный генератор, разведка/ПАСОИБ 2.md",
+    "sourse/Другой стек/Вирус, пакетный генератор, разведка/README.md",
+    "sourse/Другой стек/Вирус, пакетный генератор, разведка/Без названия.md",
+    "sourse/не совсем IT/Право и СИБ (командная работа)/README.md",
+    "sourse/с, с++/БСИТ/BSIT3/README.md",
     "sourse/с, с++/Языки программироваиня/cursee-yap/~WRL0005.tmp",
     "sourse/с, с++/Языки программироваиня/cursee-yap/~WRD0004.tmp",
     "sourse/с, с++/Языки программироваиня/cursee-yap/~$chyot_2024.docx",
@@ -182,10 +189,7 @@
     "sourse/с, с++/Языки программироваиня/yap2-минимальный_exe/~WRD0000.tmp",
     "sourse/с, с++/Языки программироваиня/yap2-минимальный_exe/~$чет2_Черникова.docx",
     "sourse/с, с++/Технологии разработки современного программного обеспечения/chernikova_v_m_lab_2_make-master/~WRL3412.tmp",
-    "sourse/с, с++/Технологии разработки современного программного обеспечения/chernikova_v_m_lab_2_make-master/~WRD3295.tmp",
     "img/Pasted image 20260105163533.png",
-    "sourse/не совсем IT/Право и СИБ (командная работа)/README.md",
-    "sourse/с, с++/БСИТ/BSIT3/README.md",
     "README.md",
     "sourse/python/Модели безопсности компьютерных систем/README.md",
     "sourse/python/Модели безопсности компьютерных систем/mbks_1/README.md",
@@ -210,13 +214,9 @@
     "sourse/с, с++/Технологии разработки современного программного обеспечения/README.md",
     "sourse/с, с++/Технологии реверс-инжиниринга программного обеспечения/README.md",
     "sourse/лабораторные работы CISCO/Лабораторные работы CISCO.md",
-    "с, с++/chernikova_v_m_lab_1_hookinject-labprogress/README.md",
     "img/Pasted image 20250619013854.png",
     "img/Pasted image 20250619013847.png",
     "img/Pasted image 20250619013836.png",
-    "с, с++/chernikova_v_m_lab_2_make-master/README.md",
-    "img/README.md",
-    "python/chernikova_v_m_lab_4_text_editor-master/README.md",
     "python/chernikova_v_m_lab_4_text_editor-master/image1.png"
   ]
 }
