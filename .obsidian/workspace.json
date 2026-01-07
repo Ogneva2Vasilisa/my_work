@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "sourse/Другой стек/Вирус, пакетный генератор, разведка/ПАСОИБ 4.md",
+                "file": "sourse/Другой стек/Вирус, пакетный генератор, разведка/README.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ПАСОИБ 4"
+              "title": "README"
             }
           }
         ]
@@ -170,11 +170,33 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "c99931cde8e080ff",
+  "active": "f03d602eea1af27b",
   "lastOpenFiles": [
-    "sourse/Другой стек/Вирус, пакетный генератор, разведка/ПАСОИБ 3.md",
     "sourse/Другой стек/Вирус, пакетный генератор, разведка/ПАСОИБ 4.md",
+    "img/Pasted image 20260107201622.png",
+    "img/Pasted image 20260107201606.png",
+    "img/Pasted image 20260107201551.png",
+    "sourse/Другой стек/Вирус, пакетный генератор, разведка/ПАСОИБ 3.md",
+    "sourse/Другой стек/Вирус, пакетный генератор, разведка/ПАСОИБ 1.md",
     "sourse/Другой стек/Вирус, пакетный генератор, разведка/ПАСОИБ 2.md",
+    "sourse/Другой стек/Вирус, пакетный генератор, разведка/~WRL0001.tmp",
+    "sourse/Другой стек/Вирус, пакетный генератор, разведка/~WRD0000.tmp",
+    "sourse/Другой стек/Вирус, пакетный генератор, разведка/~$пасоиб_черникова.docx",
+    "img/Pasted image 20260107201342.png",
+    "img/Pasted image 20260107201323.png",
+    "img/Pasted image 20260107200453.png",
+    "img/Pasted image 20260107195954.png",
+    "img/Pasted image 20260107195854.png",
+    "img/Pasted image 20260107195850.png",
+    "img/Pasted image 20260107195849.png",
+    "sourse/Другой стек/Вирус, пакетный генератор, разведка/~WRL0005.tmp",
+    "sourse/Другой стек/Вирус, пакетный генератор, разведка/~WRD0004.tmp",
+    "sourse/Другой стек/Вирус, пакетный генератор, разведка/~WRL0003.tmp",
+    "sourse/Другой стек/Вирус, пакетный генератор, разведка/~WRD0002.tmp",
+    "sourse/Другой стек/Вирус, пакетный генератор, разведка/пасоиб 1/ПАСОИБ 1.md",
+    "sourse/Другой стек/Вирус, пакетный генератор, разведка/пасоиб 1/чпа.md",
+    "sourse/Другой стек/Вирус, пакетный генератор, разведка/пасоиб 1/OWASP ZAP.md",
+    "sourse/Другой стек/Вирус, пакетный генератор, разведка/пасоиб 1/Untitled.md",
     "sourse/Другой стек/Вирус, пакетный генератор, разведка/README.md",
     "sourse/Другой стек/Вирус, пакетный генератор, разведка/Без названия.md",
     "sourse/не совсем IT/Право и СИБ (командная работа)/README.md",
@@ -182,41 +204,18 @@
     "sourse/с, с++/Языки программироваиня/cursee-yap/~WRL0005.tmp",
     "sourse/с, с++/Языки программироваиня/cursee-yap/~WRD0004.tmp",
     "sourse/с, с++/Языки программироваиня/cursee-yap/~$chyot_2024.docx",
-    "sourse/с, с++/Языки программироваиня/yap1/~WRL0003.tmp",
-    "sourse/с, с++/Языки программироваиня/yap1/~WRD0002.tmp",
-    "sourse/с, с++/Языки программироваиня/yap1/~$чет1_Черникова.docx",
-    "sourse/с, с++/Языки программироваиня/yap2-минимальный_exe/~WRL0001.tmp",
-    "sourse/с, с++/Языки программироваиня/yap2-минимальный_exe/~WRD0000.tmp",
-    "sourse/с, с++/Языки программироваиня/yap2-минимальный_exe/~$чет2_Черникова.docx",
-    "sourse/с, с++/Технологии разработки современного программного обеспечения/chernikova_v_m_lab_2_make-master/~WRL3412.tmp",
-    "img/Pasted image 20260105163533.png",
     "README.md",
     "sourse/Python/Модели безопсности компьютерных систем/README.md",
     "sourse/Python/Модели безопсности компьютерных систем/mbks_1/README.md",
     "sourse/Python/Модели безопсности компьютерных систем/mbks_4/README.md",
     "sourse/Python/Модели безопсности компьютерных систем/mbks_5/README.md",
-    "img/Pasted image 20260105161444.png",
-    "img/Pasted image 20260105161349.png",
     "sourse/Python/Модели безопсности компьютерных систем/mbks_2/README.md",
     "sourse/Python/Модели безопсности компьютерных систем/mbks_3/README.md",
-    "img/Pasted image 20260105151800.png",
     "sourse/C, C++/Формальные грамматики и теория компиляторов/README.md",
-    "img/Pasted image 20260105150605.png",
-    "img/Pasted image 20260105145100.png",
     "sourse/Python/Цифровая культура/README.md",
     "sourse/Python/ООП/README.md",
     "sourse/Python/Цифровая культура/ЦК3-4/README.md",
     "sourse/Python/Цифровая культура/ЦК2/README.md",
-    "sourse/Python/Цифровая культура/ЦК1/README.md",
-    "sourse/C, C++/Основы информационной безопасности/README.md",
-    "sourse/C, C++/Языки программироваиня/README.md",
-    "sourse/C, C++/Операционные системы/README.md",
-    "sourse/C, C++/Технологии разработки современного программного обеспечения/README.md",
-    "sourse/C, C++/Технологии реверс-инжиниринга программного обеспечения/README.md",
-    "sourse/лабораторные работы CISCO/Лабораторные работы CISCO.md",
-    "img/Pasted image 20250619013854.png",
-    "img/Pasted image 20250619013847.png",
-    "img/Pasted image 20250619013836.png",
-    "python/chernikova_v_m_lab_4_text_editor-master/image1.png"
+    "sourse/Python/Цифровая культура/ЦК1/README.md"
   ]
 }
