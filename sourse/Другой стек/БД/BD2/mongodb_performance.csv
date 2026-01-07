@@ -1,0 +1,7 @@
+Query;Avg_time;Min_time;Max_time
+traffic_per_day;4,162741;4,043421;4,504405
+events_per_day;3,458362;3,440144;3,486676
+top_source_ips;2,196201;2,185326;2,212671
+blocked_connections;0,000800;0,000000;0,001999
+events_by_log_type_action;1,961719;1,950507;1,986263
+traffic_by_protocol_threat;2,212357;2,196717;2,237781
