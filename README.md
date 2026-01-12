@@ -18,9 +18,7 @@
  Рефакторинг игры "Сапер"](python/chernikova_v_m_lab_2_refactoring-master/README.md)
 
 
----
 
-[Ссылка на репозиторий с writeup-ами **CTF**](https://github.com/Ogneva2Vasilisa/ctf)
 
 ---
 #### В рамках обучения в ВУЗе я освоила такие дисциплины как:
